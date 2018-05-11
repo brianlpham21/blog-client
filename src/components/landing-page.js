@@ -11,7 +11,7 @@ export function LandingPage(props) {
     }
 
     return (
-        <div className="home">
+        <div className="landing-page">
           <h2>Welcome to my Blog</h2>
         </div>
     );
