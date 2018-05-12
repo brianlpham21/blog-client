@@ -20,6 +20,11 @@ export class NavBar extends React.Component {
         return (
             <div className="nav-bar">
                 <h1>My Blog Navigation Bar</h1>
+                <ul>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Posts</li>
+                </ul>
                 {logOutButton}
             </div>
         );
