@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
+import {Navbar, NavItem, Nav} from 'react-bootstrap';
+
 export class NavBar extends React.Component {
     logOut() {
         this.props.dispatch(clearAuth());
@@ -25,6 +27,23 @@ export class NavBar extends React.Component {
                   <li>About</li>
                   <li>Posts</li>
                 </ul>
+                
+                <Navbar>
+                  <Navbar.Header>
+                    <Navbar.Brand>
+                      <a href="#home">React-Bootstrap</a>
+                    </Navbar.Brand>
+                  </Navbar.Header>
+                  <Nav>
+                    <NavItem eventKey={1} href="#">
+                      Home
+                    </NavItem>
+                    <NavItem eventKey={2} href="#">
+                      About
+                    </NavItem>
+                  </Nav>
+                </Navbar>
+
                 {logOutButton}
             </div>
         );
