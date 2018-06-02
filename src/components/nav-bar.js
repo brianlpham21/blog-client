@@ -20,7 +20,7 @@ export class NavBar extends React.Component {
       );
     }
     return (
-      <Navbar>
+      <Navbar fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="#">Adventures</a>

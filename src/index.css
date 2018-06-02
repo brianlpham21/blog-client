@@ -9,16 +9,8 @@ body {
   font-family: sans-serif;
 }
 
-.nav-bar {
-  background-color: violet;
-  text-align: center;
-  padding: 15px;
-}
-
-.nav-bar li {
-  list-style: none;
-}
-
 .landing-page {
   text-align: center;
+  position: relative;
+  top: 100px;
 }
