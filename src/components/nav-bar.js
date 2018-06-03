@@ -20,23 +20,43 @@ export class NavBar extends React.Component {
       );
     }
     return (
-      <Navbar fixedTop>
+      <Navbar fixedTop collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="#">Adventures</a>
           </Navbar.Brand>
+          <Navbar.Toggle />
         </Navbar.Header>
-        <Nav>
-          <NavItem eventKey={1} href="#">
-            Home
-          </NavItem>
-          <NavItem eventKey={2} href="#">
-            About
-          </NavItem>
-          <NavItem eventKey={3} href="#">
-            Posts
-          </NavItem>
-        </Nav>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">
+              Experiences
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              Travel
+            </NavItem>
+            <NavItem eventKey={3} href="#">
+              Tech
+            </NavItem>
+            <NavItem eventKey={4} href="#">
+              About
+            </NavItem>
+          </Nav>
+          <Nav pullRight>
+           <NavItem eventKey={1} href="http://www.twitter.com" target="_blank">
+            <i className="fab fa-twitter fa-lg"></i>
+           </NavItem>
+           <NavItem eventKey={2} href="http://www.instagram.com" target="_blank">
+             <i className="fab fa-instagram fa-lg"></i>
+           </NavItem>
+           <NavItem eventKey={3} href="http://www.facebook.com" target="_blank">
+             <i className="fab fa-facebook fa-lg"></i>
+           </NavItem>
+           <NavItem eventKey={4} href="http://www.github.com" target="_blank">
+             <i className="fab fa-github fa-lg"></i>
+           </NavItem>
+         </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }
