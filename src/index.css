@@ -9,10 +9,9 @@ body {
   font-family: sans-serif;
 }
 
-.landing-page {
-  text-align: center;
+.carousel {
   position: relative;
-  top: 100px;
+  top: 50px;
   width: 900px;
   margin: 0 auto;
 }
