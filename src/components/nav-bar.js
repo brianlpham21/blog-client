@@ -38,7 +38,7 @@ export class NavBar extends React.Component {
             <NavItem eventKey={3} href="#">
               Tech
             </NavItem>
-            <NavItem eventKey={4} href="#">
+            <NavItem eventKey={4} href="/about">
               About
             </NavItem>
           </Nav>

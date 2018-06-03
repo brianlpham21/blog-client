@@ -18,3 +18,8 @@ body {
   width: 900px;
   margin: 0 auto;
 }
+
+.about-container {
+  position: relative;
+  top: 50px;
+}
