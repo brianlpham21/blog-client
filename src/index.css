@@ -14,12 +14,14 @@ body {
   top: 50px;
 }
 
-.carousel {
+.carousel-container {
   width: 900px;
   margin: 0 auto;
 }
 
 .about-container {
+  margin: 0 auto;
+  width: 900px;
   position: relative;
   top: 50px;
 }
