@@ -9,9 +9,12 @@ body {
   font-family: sans-serif;
 }
 
-.carousel {
+.landing-page-container {
   position: relative;
   top: 50px;
+}
+
+.carousel {
   width: 900px;
   margin: 0 auto;
 }

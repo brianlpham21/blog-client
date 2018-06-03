@@ -12,7 +12,7 @@ export function LandingPage(props) {
   }
 
   return (
-    <div>
+    <div className="landing-page-container">
       <MainCarousel />
     </div>
   );
