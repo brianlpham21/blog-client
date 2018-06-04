@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
-import {Grid, Row, Col} from 'react-bootstrap';
-import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button} from 'reactstrap';
+import {Grid, Row, Col, Button} from 'react-bootstrap';
+import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
 
 export function MainArticleSection(props) {
@@ -12,48 +12,48 @@ export function MainArticleSection(props) {
       <Grid>
         <Row className="article-row">
           <Col md={6} mdPush={6}>
-            <Card>
-              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-              <CardBody>
+            <Card className="card">
+              <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+              <CardBody className="card-body">
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
                 <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                <Button>Button</Button>
+                <Button>Read More</Button>
               </CardBody>
             </Card>
           </Col>
           <Col md={6} mdPull={6}>
-            <Card>
-              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-              <CardBody>
+            <Card className="card">
+              <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+              <CardBody className="card-body">
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
                 <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                <Button>Button</Button>
+                <Button>Read More</Button>
               </CardBody>
             </Card>
           </Col>
         </Row>
         <Row className="article-row">
           <Col md={6} mdPush={6}>
-            <Card>
-              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-              <CardBody>
+            <Card className="card">
+              <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+              <CardBody className="card-body">
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
                 <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                <Button>Button</Button>
+                <Button>Read More</Button>
               </CardBody>
             </Card>
           </Col>
           <Col md={6} mdPull={6}>
-            <Card>
-              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-              <CardBody>
+            <Card className="card">
+              <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+              <CardBody className="card-body">
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
                 <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                <Button>Button</Button>
+                <Button>Read More</Button>
               </CardBody>
             </Card>
           </Col>
