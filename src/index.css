@@ -18,7 +18,11 @@ body {
 }
 
 .main-article-container {
-  height: 600px;
+  padding: 40px 0;
+}
+
+.article-row {
+  padding: 10px 0
 }
 
 .learn-container {
