@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {clearAuth} from '../actions/auth';
-import {clearAuthToken} from '../local-storage';
+import {clearAuth} from '../../actions/auth';
+import {clearAuthToken} from '../../local-storage';
 
-export class About extends React.Component {
+export class AboutPage extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
     clearAuthToken();
@@ -22,4 +22,4 @@ const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(About);
+export default connect(mapStateToProps)(AboutPage);
