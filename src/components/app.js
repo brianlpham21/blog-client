@@ -4,7 +4,7 @@ import {Route, withRouter} from 'react-router-dom';
 
 import NavBar from './navbar';
 import LandingPage from './landing-page';
-import LoginForm from './user/login-form';
+import LoginPage from './user/login-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './user/registration-page';
 import About from './about';
@@ -47,7 +47,7 @@ export class App extends React.Component {
       <div className="app">
         <NavBar />
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/login" component={LoginForm} />
+        <Route exact path="/login" component={LoginPage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/about" component={About} />
