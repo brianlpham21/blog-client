@@ -11,6 +11,32 @@ body {
   top: 50px
 }
 
+.button {
+  background: transparent;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: all .6s;
+}
+
+.button:hover {
+  background: white;
+  color: rgba(0, 0, 0, .7);
+}
+
+.article-button {
+  background: transparent;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: all .8s;
+}
+
+.article-button:hover {
+  color: white;
+  background: rgba(0, 0, 0, .2);
+}
+
 .carousel-image {
   max-height: 600px;
   width: 100%;

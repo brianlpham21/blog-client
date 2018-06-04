@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
-import {Grid, Row, Col, Button} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
 
@@ -19,7 +19,7 @@ export function MainArticleSection(props) {
                   <CardTitle>Card title</CardTitle>
                   <CardSubtitle>Card subtitle</CardSubtitle>
                   <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <Button>Read More</Button>
+                  <button className="article-button">Read More</button>
                 </CardBody>
               </Card>
             </Link>
@@ -32,7 +32,7 @@ export function MainArticleSection(props) {
                   <CardTitle>Card title</CardTitle>
                   <CardSubtitle>Card subtitle</CardSubtitle>
                   <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <Button>Read More</Button>
+                  <button className="article-button">Read More</button>
                 </CardBody>
               </Card>
             </Link>
@@ -47,7 +47,7 @@ export function MainArticleSection(props) {
                   <CardTitle>Card title</CardTitle>
                   <CardSubtitle>Card subtitle</CardSubtitle>
                   <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <Button>Read More</Button>
+                  <button className="article-button">Read More</button>
                 </CardBody>
               </Card>
             </Link>
@@ -60,7 +60,7 @@ export function MainArticleSection(props) {
                   <CardTitle>Card title</CardTitle>
                   <CardSubtitle>Card subtitle</CardSubtitle>
                   <CardText>Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <Button>Read More</Button>
+                  <button className="article-button">Read More</button>
                 </CardBody>
               </Card>
             </Link>
