@@ -4,9 +4,9 @@ import {Route, withRouter} from 'react-router-dom';
 
 import NavBar from './navbar';
 import LandingPage from './landing-page';
-import LoginForm from './login-form';
+import LoginForm from './user/login-form';
 import Dashboard from './dashboard';
-import RegistrationPage from './registration-page';
+import RegistrationPage from './user/registration-page';
 import About from './about';
 import Footer from './footer';
 
@@ -62,5 +62,4 @@ const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null
 });
 
-// Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
 export default withRouter(connect(mapStateToProps)(App));
