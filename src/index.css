@@ -11,20 +11,28 @@ body {
   top: 50px
 }
 
-.landing-page-container {
-
-}
-
 .carousel-image {
   max-height: 600px;
   width: 100%;
   object-fit: cover;
 }
 
-.about-container {
-  
+.main-article-container {
+  height: 800px;
+}
+
+.learn-container {
+  background-image: url('./images/camera.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 300px;
 }
 
 .footer-container {
+  padding: 40px 0;
+}
 
+.footer-links {
+  list-style: none;
 }

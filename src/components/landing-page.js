@@ -2,8 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
-import LoginForm from './login-form';
 import MainCarousel from './main-carousel';
+import MainArticleSection from './main-article-section';
+import LearnAboutMe from './learn-about-me';
 
 export function LandingPage(props) {
   // If we are logged in redirect straight to the user's dashboard
@@ -14,6 +15,9 @@ export function LandingPage(props) {
   return (
     <div className="landing-page-container">
       <MainCarousel />
+      <MainArticleSection />
+      <LearnAboutMe />
+      <MainArticleSection />
     </div>
   );
 }

@@ -6,19 +6,19 @@ import {Grid, Row, Col} from 'react-bootstrap';
 
 export function Footer(props) {
   return (
-    <div className="footer-container">
+    <div className="footer-container bg-info">
       <Grid>
         <Row>
           <Col md={6} mdPush={6}>
             <p>Copyright &copy; 2018</p>
           </Col>
           <Col md={6} mdPull={6}>
-            <ul>
-              <a href="/about"><li>About</li></a>
-              <a href="/category/experiences"><li>Experiences</li></a>
-              <a href="/category/travel"><li>Travel</li></a>
-              <a href="/category/tech"><li>Tech</li></a>
-              <a href="/login"><li>Login</li></a>
+            <ul className="footer-links">
+              <Link to="/about"><li>About</li></Link>
+              <Link to="/category/experiences"><li>Experiences</li></Link>
+              <Link to="/category/travel"><li>Travel</li></Link>
+              <Link to="/category/tech"><li>Tech</li></Link>
+              <Link to="/login"><li>Login</li></Link>
             </ul>
           </Col>
         </Row>

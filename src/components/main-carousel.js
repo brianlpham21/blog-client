@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
@@ -19,7 +20,7 @@ export class MainCarousel extends React.Component {
       <div className="carousel-container">
         <Carousel>
           <Carousel.Item>
-            <a href="#"><img className="carousel-image" src={camera} /></a>
+            <Link to="#"><img className="carousel-image" src={camera} /></Link>
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -29,7 +30,7 @@ export class MainCarousel extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <a href="#"><img className="carousel-image" src={camera} /></a>
+            <Link to="#"><img className="carousel-image" src={camera} /></Link>
             <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -39,7 +40,7 @@ export class MainCarousel extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <a href="#"><img className="carousel-image" src={camera} /></a>
+            <Link to="#"><img className="carousel-image" src={camera} /></Link>
             <Carousel.Caption>
               <h3>Third slide label</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
