@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
-import {Navbar, NavItem, Nav} from 'react-bootstrap';
+import {Navbar, NavItem, Nav, Button} from 'react-bootstrap';
 
 export class NavBar extends React.Component {
   logOut() {
@@ -16,9 +16,10 @@ export class NavBar extends React.Component {
     let logOutButton;
     if (this.props.loggedIn) {
       logOutButton = (
-        <button onClick={() => this.logOut()}>Log out</button>
+        <button onClick={() => this.logOut()} style={{padding: '0 5px', borderRadius: '5px'}}>Log out</button>
       );
     }
+
     return (
       <div className="navbar-container">
         <Navbar fixedTop collapseOnSelect>
@@ -41,6 +42,9 @@ export class NavBar extends React.Component {
               </NavItem>
               <NavItem eventKey={4} href="/about">
                 About
+              </NavItem>
+              <NavItem eventKey={5}>
+                {logOutButton}
               </NavItem>
             </Nav>
             <Nav pullRight>
