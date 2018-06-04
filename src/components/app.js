@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 
-import MainNavbar from './main-navbar';
+import NavBar from './navbar';
 import LandingPage from './landing-page';
 import LoginForm from './login-form';
 import Dashboard from './dashboard';
@@ -44,7 +44,7 @@ export class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <MainNavbar />
+        <NavBar />
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/login" component={LoginForm} />
         <Route exact path="/dashboard" component={Dashboard} />
