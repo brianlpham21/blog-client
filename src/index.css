@@ -7,11 +7,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  position: relative;
+  top: 50px
 }
 
 .landing-page-container {
-  position: relative;
-  top: 50px;
+
 }
 
 .carousel-image {
@@ -21,8 +22,9 @@ body {
 }
 
 .about-container {
-  margin: 0 auto;
-  width: 900px;
-  position: relative;
-  top: 50px;
+  
+}
+
+.footer-container {
+
 }

@@ -8,6 +8,7 @@ import LoginForm from './login-form';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import About from './about';
+import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
 
@@ -50,6 +51,7 @@ export class App extends React.Component {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/about" component={About} />
+        <Footer />
       </div>
     );
   }

@@ -24,19 +24,19 @@ export class NavBar extends React.Component {
         <Navbar fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Adventures</a>
+              <a href="/">Adventures</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="#">
+              <NavItem eventKey={1} href="/category/experiences">
                 Experiences
               </NavItem>
-              <NavItem eventKey={2} href="#">
+              <NavItem eventKey={2} href="/category/travel">
                 Travel
               </NavItem>
-              <NavItem eventKey={3} href="#">
+              <NavItem eventKey={3} href="/category/tech">
                 Tech
               </NavItem>
               <NavItem eventKey={4} href="/about">
