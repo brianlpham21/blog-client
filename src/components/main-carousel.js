@@ -19,7 +19,7 @@ export class MainCarousel extends React.Component {
     return (
       <div className="carousel-container">
         <Carousel>
-          <Carousel.Item>
+          <Carousel.Item className="overlay">
             <Link to="#"><img className="carousel-image" src={camera} /></Link>
             <Carousel.Caption>
               <h3>First slide label</h3>
@@ -29,7 +29,7 @@ export class MainCarousel extends React.Component {
               <br />
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className="overlay">
             <Link to="#"><img className="carousel-image" src={camera} /></Link>
             <Carousel.Caption>
               <h3>Second slide label</h3>
@@ -39,7 +39,7 @@ export class MainCarousel extends React.Component {
               <br />
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className="overlay">
             <Link to="#"><img className="carousel-image" src={camera} /></Link>
             <Carousel.Caption>
               <h3>Third slide label</h3>

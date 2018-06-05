@@ -38,6 +38,18 @@ body {
   background: rgba(0, 0, 0, .4);
 }
 
+.overlay:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+  display: block;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
 .carousel-image {
   max-height: 600px;
   width: 100%;
@@ -58,6 +70,7 @@ body {
 
 .card {
   border-radius: 5px;
+  color: black;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
   transition: all .2s;
@@ -73,6 +86,18 @@ body {
 
 .card-body {
   padding: 10px 20px 20px 20px;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.card-date {
+  font-size: 14px;
+}
+
+.card-text {
+
 }
 
 .learn-container {
