@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import {Grid, Row, Col, Modal, Button} from 'react-bootstrap';
+import {Grid, Row, Col, Modal, Button, HelpBlock, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
 
 export class Footer extends React.Component {
   constructor(props, context) {
@@ -10,6 +10,7 @@ export class Footer extends React.Component {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       show: false
@@ -24,7 +25,22 @@ export class Footer extends React.Component {
     this.setState({ show: true });
   }
 
+  handleSubmit() {
+    console.log('submitted');
+    this.setState({ show: false });
+  }
+
   render() {
+    function FieldGroup({ id, label, help, ...props }) {
+      return (
+        <FormGroup controlId={id}>
+          <ControlLabel>{label}</ControlLabel>
+          <FormControl {...props} />
+          {help && <HelpBlock>{help}</HelpBlock>}
+        </FormGroup>
+      );
+    }
+
     return (
       <div className="footer-container">
         <Grid>
@@ -70,9 +86,28 @@ export class Footer extends React.Component {
             <Modal.Title>Contact Form</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Contact</h4>
+            <p>Hey! Please let me know what you think.</p>
+            <form>
+              <FieldGroup
+                id="formControlsText"
+                type="name"
+                label="Name"
+                placeholder="Enter your name"
+              />
+              <FieldGroup
+                id="formControlsEmail"
+                type="email"
+                label="Email address"
+                placeholder="Enter your email"
+              />
+              <FormGroup controlId="formControlsTextarea">
+                <ControlLabel>Textarea</ControlLabel>
+                <FormControl componentClass="textarea" placeholder="textarea" />
+              </FormGroup>
+            </form>
           </Modal.Body>
           <Modal.Footer>
+            <Button onClick={this.handleSubmit} disabled>Submit</Button>
             <Button onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
