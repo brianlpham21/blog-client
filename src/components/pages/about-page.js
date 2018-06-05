@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth';
 import {clearAuthToken} from '../../local-storage';
 
-import {Grid, Row, Col} from 'react-bootstrap';
-import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
+// import {Grid, Row, Col} from 'react-bootstrap';
+// import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
 export class AboutPage extends React.Component {
   logOut() {
