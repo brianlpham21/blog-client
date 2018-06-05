@@ -47,6 +47,11 @@ export class Footer extends React.Component {
           <Row>
             <Col md={4}>
               <h4>Brians Adventures</h4>
+              <ul className="footer-links footer-information">
+                <li><a href="mailto:brianlpham21@gmail.com"><i class="far fa-envelope"></i><span className="footer-text">brianlpham21@gmail.com</span></a></li>
+                <li><i class="fas fa-map-marker-alt"></i><span className="footer-text"> Orange County, CA</span></li>
+                <li></li>
+              </ul>
             </Col>
             <Col md={2}>
               <h5>Explore</h5>
