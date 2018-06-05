@@ -6,7 +6,7 @@ import NavBar from './navbar';
 import LandingPage from './landing-page';
 
 import LoginPage from './user/login-page';
-import Dashboard from './dashboard';
+import Dashboard from './user/dashboard';
 
 import ExperiencesPage from './pages/experiences-page';
 import TravelPage from './pages/travel-page';

@@ -12,12 +12,18 @@ export class NavBar extends React.Component {
   }
 
   render() {
+    let style = {
+      padding: '0 5px',
+      borderRadius: '5px',
+      color: 'black'
+    };
+
     let logOutButton;
     if (this.props.loggedIn) {
       logOutButton = (
-        <button onClick={() => this.logOut()} style={{padding: '0 5px', borderRadius: '5px', color: 'black'}}>Log out</button>
+        <button onClick={() => this.logOut()} style={style}>Log out</button>
       );
-    }
+    };
 
     return (
       <div className="navbar-container">
