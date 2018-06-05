@@ -107,7 +107,6 @@ body {
 }
 
 .learn-container {
-  background-image: url('./images/camera.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
