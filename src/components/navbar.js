@@ -19,8 +19,6 @@ export class NavBar extends React.Component {
       );
     }
 
-    console.log(window.location.pathname);
-
     return (
       <div className="navbar-container">
         <Navbar inverse fixedTop collapseOnSelect>

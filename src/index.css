@@ -96,16 +96,12 @@ body {
   font-size: 14px;
 }
 
-.card-text {
-
-}
-
 .learn-container {
   background-image: url('./images/camera.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 300px;
+  height: 400px;
   display: flex;
   align-content: center;
 }
@@ -119,6 +115,7 @@ body {
 
 .footer-container {
   padding: 40px 0;
+  border-top: 1px solid rgba(0, 0, 0, .2);
 }
 
 .footer-links {

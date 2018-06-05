@@ -26,7 +26,7 @@ export class Footer extends React.Component {
 
   render() {
     return (
-      <div className="footer-container bg-info">
+      <div className="footer-container">
         <Grid>
           <Row>
             <Col md={4}>
