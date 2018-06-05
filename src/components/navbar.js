@@ -5,6 +5,8 @@ import {clearAuthToken} from '../local-storage';
 
 import {Navbar, NavItem, Nav} from 'react-bootstrap';
 
+import './navbar.css';
+
 export class NavBar extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
@@ -21,7 +23,7 @@ export class NavBar extends React.Component {
     let logOutButton;
     if (this.props.loggedIn) {
       logOutButton = (
-        <button onClick={() => this.logOut()} style={style}>Log out</button>
+        <button onClick={() => this.logOut()} style={style} className="logout-button">Log out</button>
       );
     };
 
