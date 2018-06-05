@@ -5,6 +5,8 @@ import {clearAuthToken} from '../local-storage';
 
 import {Navbar, NavItem, Nav} from 'react-bootstrap';
 
+import logo from '../images/adventure-logo.png';
+
 import './navbar.css';
 
 export class NavBar extends React.Component {
@@ -32,7 +34,7 @@ export class NavBar extends React.Component {
         <Navbar fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">Brian&#39;s Adventures</a>
+              <a href="/"><img src={logo} alt="logo" className="logo" /></a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

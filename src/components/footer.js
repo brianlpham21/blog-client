@@ -4,6 +4,10 @@ import {Link} from 'react-router-dom';
 
 import {Grid, Row, Col, Modal, Button, HelpBlock, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
 
+import logo from '../images/adventure-logo.png';
+
+import './footer.css';
+
 export class Footer extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -46,7 +50,7 @@ export class Footer extends React.Component {
         <Grid>
           <Row>
             <Col md={4}>
-              <h4>Brian&#39;s Adventures</h4>
+              <img src={logo} alt="logo" className="footer-logo" />
               <ul className="footer-links footer-information">
                 <li><a href="mailto:brianlpham21@gmail.com"><i className="far fa-envelope"></i><span className="footer-text">brianlpham21@gmail.com</span></a></li>
                 <li><i className="fas fa-map-marker-alt"></i><span className="footer-text"> Orange County, CA</span></li>
