@@ -5,7 +5,7 @@ import {clearAuthToken} from '../local-storage';
 
 import {Navbar, NavItem, Nav} from 'react-bootstrap';
 
-import logo from '../images/adventure-logo.png';
+import logo from '../images/adventures-logo-md.png';
 
 import './navbar.css';
 
