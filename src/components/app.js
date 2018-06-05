@@ -7,6 +7,7 @@ import LandingPage from './landing-page';
 
 import LoginPage from './user/login-page';
 import Dashboard from './user/dashboard';
+import RegistrationPage from './user/registration-page';
 
 import ExperiencesPage from './pages/experiences-page';
 import TravelPage from './pages/travel-page';
@@ -55,6 +56,7 @@ export class App extends React.Component {
 
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/register" component={RegistrationPage} />
 
         <Route exact path="/category/experiences" component={ExperiencesPage} />
         <Route exact path="/category/travel" component={TravelPage} />
