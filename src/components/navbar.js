@@ -15,7 +15,7 @@ export class NavBar extends React.Component {
     let logOutButton;
     if (this.props.loggedIn) {
       logOutButton = (
-        <button onClick={() => this.logOut()} style={{padding: '0 5px', borderRadius: '5px'}}>Log out</button>
+        <button onClick={() => this.logOut()} style={{padding: '0 5px', borderRadius: '5px', color: 'black'}}>Log out</button>
       );
     }
 

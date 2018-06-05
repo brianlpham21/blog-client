@@ -35,7 +35,7 @@ body {
 
 .article-button:hover {
   color: white;
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, .6);
 }
 
 .overlay:before {
@@ -133,4 +133,24 @@ body {
 .footer-copyright {
   color: rgba(0, 0, 0, .6);
   margin: 50px 0 20px 0;
+}
+
+.login-page {
+  margin: 50px 200px;
+}
+
+.login-button {
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.login-button:hover {
+  cursor: pointer;
+  background-color: silver;
+}
+
+.form-error {
+  color: red;
+  padding-left: 10px;
 }
