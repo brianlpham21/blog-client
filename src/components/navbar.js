@@ -56,7 +56,7 @@ export class NavBar extends React.Component {
                 {logOutButton}
               </NavItem>
             </Nav>
-            <Nav pullRight>
+            <Nav pullRight className="navbar-social-media-icons">
              <NavItem eventKey={1} href="http://www.twitter.com/brianlpham21" target="_blank">
               <i className="fab fa-twitter fa-lg"></i>
              </NavItem>

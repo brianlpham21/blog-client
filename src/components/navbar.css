@@ -5,3 +5,9 @@
 .logout-button:hover {
   background: silver;
 }
+
+@media only screen and (max-width: 1000px) {
+  .navbar-social-media-icons {
+    display: none;
+  }
+}
