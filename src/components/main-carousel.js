@@ -21,8 +21,8 @@ export class MainCarousel extends React.Component {
           <Carousel.Item className="overlay">
             <Link to="#"><img className="carousel-image" src={camera} alt="Carousel 1" /></Link>
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="carousel-title">First slide label</h3>
+              <p className="carousel-text">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               <Link to="#"><button className="button">Read More</button></Link>
               <br />
               <br />
@@ -31,8 +31,8 @@ export class MainCarousel extends React.Component {
           <Carousel.Item className="overlay">
             <Link to="#"><img className="carousel-image" src={camera} alt="Carousel 2" /></Link>
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className="carousel-title">Second slide label</h3>
+              <p className="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <Link to="#"><button className="button">Read More</button></Link>
               <br />
               <br />
@@ -41,8 +41,8 @@ export class MainCarousel extends React.Component {
           <Carousel.Item className="overlay">
             <Link to="#"><img className="carousel-image" src={camera} alt="Carousel 3" /></Link>
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3 className="carousel-title">Third slide label</h3>
+              <p className="carousel-text">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
               <Link to="#"><button className="button">Read More</button></Link>
               <br />
               <br />

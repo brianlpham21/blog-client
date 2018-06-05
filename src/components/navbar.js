@@ -21,7 +21,7 @@ export class NavBar extends React.Component {
 
     return (
       <div className="navbar-container">
-        <Navbar inverse fixedTop collapseOnSelect>
+        <Navbar fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">Adventures</a>
@@ -47,16 +47,16 @@ export class NavBar extends React.Component {
               </NavItem>
             </Nav>
             <Nav pullRight>
-             <NavItem eventKey={1} href="http://www.twitter.com" target="_blank">
+             <NavItem eventKey={1} href="http://www.twitter.com/brianlpham21" target="_blank">
               <i className="fab fa-twitter fa-lg"></i>
              </NavItem>
-             <NavItem eventKey={2} href="http://www.instagram.com" target="_blank">
+             <NavItem eventKey={2} href="http://www.instagram.com/brianlpham21" target="_blank">
                <i className="fab fa-instagram fa-lg"></i>
              </NavItem>
-             <NavItem eventKey={3} href="http://www.facebook.com" target="_blank">
+             <NavItem eventKey={3} href="http://www.facebook.com/blpham" target="_blank">
                <i className="fab fa-facebook fa-lg"></i>
              </NavItem>
-             <NavItem eventKey={4} href="http://www.github.com" target="_blank">
+             <NavItem eventKey={4} href="http://www.github.com/brianlpham21" target="_blank">
                <i className="fab fa-github fa-lg"></i>
              </NavItem>
            </Nav>

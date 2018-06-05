@@ -19,8 +19,8 @@ export function LandingPage(props) {
       <MainArticleSection />
 
       <section id='instagram-feed'>
-        <h2 class='instagram-feed-title'>Instagram</h2>
-        <div id="instafeed" class='instafeed'></div>
+        <h2 className='instagram-feed-title'>Instagram</h2>
+        <div id="instafeed" className='instafeed'></div>
       </section>
     </div>
   );

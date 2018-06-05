@@ -7,7 +7,6 @@ import LandingPage from './landing-page';
 
 import LoginPage from './user/login-page';
 import Dashboard from './dashboard';
-import RegistrationPage from './user/registration-page';
 
 import ExperiencesPage from './pages/experiences-page';
 import TravelPage from './pages/travel-page';
