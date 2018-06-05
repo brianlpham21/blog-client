@@ -70,10 +70,10 @@ export class Footer extends React.Component {
             <Col md={2}>
               <h5>Follow</h5>
               <ul className="footer-links">
-                <Link to="http://www.twttier.com/brianlpham21"><li>Twitter</li></Link>
-                <Link to="http://www.instagram.com/brianlpham21"><li>Instagram</li></Link>
-                <Link to="http://www.facebook.com/blpham"><li>Facebook</li></Link>
-                <Link to="http://www.github.com/brianlpham21"><li>Github</li></Link>
+                <a href="http://www.twitter.com/brianlpham21" target="_blank"><li>Twitter</li></a>
+                <a href="http://www.instagram.com/brianlpham21" target="_blank"><li>Instagram</li></a>
+                <a href="http://www.facebook.com/blpham" target="_blank"><li>Facebook</li></a>
+                <a href="http://www.github.com/brianlpham21" target="_blank"><li>GitHub</li></a>
               </ul>
             </Col>
             <Col md={2}>
