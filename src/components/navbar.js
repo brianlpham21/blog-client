@@ -24,7 +24,7 @@ export class NavBar extends React.Component {
         <Navbar fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">Adventures</a>
+              <a href="/">Brian&#39;s Adventures</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

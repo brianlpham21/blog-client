@@ -46,10 +46,10 @@ export class Footer extends React.Component {
         <Grid>
           <Row>
             <Col md={4}>
-              <h4>Brians Adventures</h4>
+              <h4>Brian&#39;s Adventures</h4>
               <ul className="footer-links footer-information">
-                <li><a href="mailto:brianlpham21@gmail.com"><i class="far fa-envelope"></i><span className="footer-text">brianlpham21@gmail.com</span></a></li>
-                <li><i class="fas fa-map-marker-alt"></i><span className="footer-text"> Orange County, CA</span></li>
+                <li><a href="mailto:brianlpham21@gmail.com"><i className="far fa-envelope"></i><span className="footer-text">brianlpham21@gmail.com</span></a></li>
+                <li><i className="fas fa-map-marker-alt"></i><span className="footer-text"> Orange County, CA</span></li>
                 <li></li>
               </ul>
             </Col>
@@ -81,7 +81,7 @@ export class Footer extends React.Component {
           </Row>
           <Row>
           <Col className="footer-copyright">
-            <p>&copy; 2018 | Brians Adventures. All Rights Reserved.</p>
+            <p>&copy; 2018 | Brian&#39;s Adventures. All Rights Reserved.</p>
           </Col>
           </Row>
         </Grid>
