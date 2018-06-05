@@ -6,7 +6,6 @@ import {clearAuthToken} from '../local-storage';
 
 import {Carousel} from 'react-bootstrap';
 
-import carousel from '../images/carousel.png';
 import camera from '../images/camera.jpg';
 
 export class MainCarousel extends React.Component {
@@ -20,7 +19,7 @@ export class MainCarousel extends React.Component {
       <div className="carousel-container">
         <Carousel>
           <Carousel.Item className="overlay">
-            <Link to="#"><img className="carousel-image" src={camera} /></Link>
+            <Link to="#"><img className="carousel-image" src={camera} alt="Carousel 1" /></Link>
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -30,7 +29,7 @@ export class MainCarousel extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="overlay">
-            <Link to="#"><img className="carousel-image" src={camera} /></Link>
+            <Link to="#"><img className="carousel-image" src={camera} alt="Carousel 2" /></Link>
             <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -40,7 +39,7 @@ export class MainCarousel extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="overlay">
-            <Link to="#"><img className="carousel-image" src={camera} /></Link>
+            <Link to="#"><img className="carousel-image" src={camera} alt="Carousel 3" /></Link>
             <Carousel.Caption>
               <h3>Third slide label</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

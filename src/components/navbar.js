@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
-import {Navbar, NavItem, Nav, Button} from 'react-bootstrap';
+import {Navbar, NavItem, Nav} from 'react-bootstrap';
 
 export class NavBar extends React.Component {
   logOut() {
@@ -19,9 +19,11 @@ export class NavBar extends React.Component {
       );
     }
 
+    console.log(window.location.pathname);
+
     return (
       <div className="navbar-container">
-        <Navbar fixedTop collapseOnSelect>
+        <Navbar inverse fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">Adventures</a>
@@ -30,16 +32,16 @@ export class NavBar extends React.Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="/category/experiences">
+              <NavItem className={window.location.pathname === "/category/experiences" ? "active" : ""} eventKey={1} href="/category/experiences">
                 Experiences
               </NavItem>
-              <NavItem eventKey={2} href="/category/travel">
+              <NavItem className={window.location.pathname === "/category/travel" ? "active" : ""} eventKey={2} href="/category/travel">
                 Travel
               </NavItem>
-              <NavItem eventKey={3} href="/category/tech">
+              <NavItem className={window.location.pathname === "/category/tech" ? "active" : ""} eventKey={3} href="/category/tech">
                 Tech
               </NavItem>
-              <NavItem eventKey={4} href="/about">
+              <NavItem className={window.location.pathname === "/about" ? "active" : ""} eventKey={4} href="/about">
                 About
               </NavItem>
               <NavItem eventKey={5}>

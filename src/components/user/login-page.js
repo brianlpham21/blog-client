@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import LoginForm from './login-form';
 
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 export function LoginPage(props) {
   if (props.loggedIn) {
