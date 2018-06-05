@@ -10,5 +10,18 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script type="text/javascript" src="./instafeed.min.js"></script>
+    <script type="text/javascript">
+      var userFeed = new Instafeed({
+        get: 'user',
+        limit: 10,
+        resolution: 'low_resolution',
+        userId: '7594085417',
+        clientId: 'c91962c238054ba2b5abb6af3b2c5629',
+        accessToken: '7594085417.1677ed0.4e1e547e565840a1b76c85780abd80d3'
+      });
+      userFeed.run();
+    </script>
   </body>
 </html>

@@ -47,7 +47,7 @@ body {
   min-height: 600px;
   display: block;
   z-index: 0;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .25);
 }
 
 .carousel-image {
@@ -111,6 +111,24 @@ body {
   color: white;
   width: 55%;
   margin: auto;
+}
+
+#instagram-feed {
+  text-align: center;
+  margin: 0 auto 80px auto;
+  max-width: 1000px;
+  min-height: 0;
+  padding: 0;
+}
+
+.instagram-feed-title {
+  padding: 10px 0 20px 0
+}
+
+#instafeed img {
+  height: 190px;
+  margin: 5px;
+  width: 190px;
 }
 
 .footer-container {
