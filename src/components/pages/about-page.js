@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth';
 import {clearAuthToken} from '../../local-storage';
 
-// import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 // import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
 export class AboutPage extends React.Component {
@@ -15,7 +15,13 @@ export class AboutPage extends React.Component {
   render() {
     return (
       <div className="about-container">
-        <h1>About Page</h1>
+        <Grid>
+          <Row>
+            <Col>
+              <h3>About Section</h3>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
