@@ -51,7 +51,7 @@ export class MainCarousel extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="overlay">
-            <Link to="#"><img className="carousel-image" src={this.props.posts[2g].photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Carousel 3" /></Link>
+            <Link to="#"><img className="carousel-image" src={this.props.posts[2].photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Carousel 3" /></Link>
             <Carousel.Caption>
               <h3 className="carousel-title">{this.props.posts[2].title || 'N/A'}</h3>
               <p className="carousel-text">{this.props.posts[2].text || 'N/A'}</p>
