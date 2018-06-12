@@ -6,13 +6,21 @@ import {clearAuthToken} from '../local-storage';
 
 import {Carousel} from 'react-bootstrap';
 
+import {fetchPostsData} from '../actions/posts';
+
 export class MainCarousel extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
     clearAuthToken();
   }
 
+  componentDidMount() {
+    this.props.dispatch(fetchPostsData());
+  }
+
   render() {
+    console.log(this.props.posts[0]);
+
     return (
       <div className="carousel-container">
         <Carousel>
@@ -53,7 +61,8 @@ export class MainCarousel extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
+  loggedIn: state.auth.currentUser !== null,
+  posts: state.postsData.posts
 });
 
 export default connect(mapStateToProps)(MainCarousel);
