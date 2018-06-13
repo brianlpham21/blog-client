@@ -14,6 +14,8 @@ import TravelPage from './pages/travel-page';
 import TechPage from './pages/tech-page';
 import AboutPage from './pages/about-page';
 
+import PostPage from './post-page';
+
 import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
@@ -61,6 +63,8 @@ export class App extends React.Component {
         <Route exact path="/category/travel" component={TravelPage} />
         <Route exact path="/category/tech" component={TechPage} />
         <Route exact path="/about" component={AboutPage} />
+
+        <Route path="/post/:id" render={({match}) => <PostPage id={match.params.id} />} />
 
         <Footer />
       </div>

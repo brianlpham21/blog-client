@@ -6,7 +6,7 @@ import {Row, Col, Button} from 'react-bootstrap';
 
 import './dashboard-post.css';
 
-export class Dashboard extends React.Component {
+export class DashboardPost extends React.Component {
   render() {
     if (!(this.props.category)) {
       return <div></div>
@@ -40,4 +40,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect(mapStateToProps)(DashboardPost));

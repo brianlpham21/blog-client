@@ -26,7 +26,7 @@ export class MainCarousel extends React.Component {
             <Carousel.Caption>
               <h3 className="carousel-title">{this.props.posts[0].title || 'N/A'}</h3>
               <p className="carousel-text">{this.props.posts[0].text || 'N/A'}</p>
-              <Link to="#"><button className="button">Read More</button></Link>
+              <Link to={`/post/${this.props.posts[0].id}`}><button className="button">Read More</button></Link>
               <br />
               <br />
             </Carousel.Caption>
@@ -36,7 +36,7 @@ export class MainCarousel extends React.Component {
             <Carousel.Caption>
               <h3 className="carousel-title">{this.props.posts[1].title || 'N/A'}</h3>
               <p className="carousel-text">{this.props.posts[1].text || 'N/A'}</p>
-              <Link to="#"><button className="button">Read More</button></Link>
+              <Link to={`/post/${this.props.posts[1].id}`}><button className="button">Read More</button></Link>
               <br />
               <br />
             </Carousel.Caption>
@@ -46,7 +46,7 @@ export class MainCarousel extends React.Component {
             <Carousel.Caption>
               <h3 className="carousel-title">{this.props.posts[2].title || 'N/A'}</h3>
               <p className="carousel-text">{this.props.posts[2].text || 'N/A'}</p>
-              <Link to="#"><button className="button">Read More</button></Link>
+              <Link to={`/post/${this.props.posts[2].id}`}><button className="button">Read More</button></Link>
               <br />
               <br />
             </Carousel.Caption>
