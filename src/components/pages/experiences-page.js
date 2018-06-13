@@ -1,21 +1,30 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {clearAuth} from '../../actions/auth';
-import {clearAuthToken} from '../../local-storage';
 
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
+import {fetchPostsData} from '../../actions/posts';
+
 import './experience-page.css';
 
 export class ExperiencesPage extends React.Component {
-  logOut() {
-    this.props.dispatch(clearAuth());
-    clearAuthToken();
+  componentDidMount() {
+    this.props.dispatch(fetchPostsData());
   }
 
   render() {
+    let experiencesPosts = '';
+
+    if (this.props.posts.length > 1) {
+      experiencesPosts = (this.props.posts.filter(function(post) {
+        return post.category === 'Experiences';
+      }));
+    }
+
+    console.log(experiencesPosts);
+
     return (
       <div className="experiences-container">
         <Grid>
@@ -82,7 +91,8 @@ export class ExperiencesPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
+  loggedIn: state.auth.currentUser !== null,
+  posts: state.postsData.posts
 });
 
 export default connect(mapStateToProps)(ExperiencesPage);

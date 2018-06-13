@@ -1,19 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {clearAuth} from '../actions/auth';
-import {clearAuthToken} from '../local-storage';
 
 import {Carousel} from 'react-bootstrap';
 
 import {fetchPostsData} from '../actions/posts';
 
 export class MainCarousel extends React.Component {
-  logOut() {
-    this.props.dispatch(clearAuth());
-    clearAuthToken();
-  }
-
   componentDidMount() {
     this.props.dispatch(fetchPostsData());
   }

@@ -1,21 +1,30 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {clearAuth} from '../../actions/auth';
-import {clearAuthToken} from '../../local-storage';
 
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
+import {fetchPostsData} from '../../actions/posts';
+
 import './travel-page.css';
 
 export class TravelPage extends React.Component {
-  logOut() {
-    this.props.dispatch(clearAuth());
-    clearAuthToken();
+  componentDidMount() {
+    this.props.dispatch(fetchPostsData());
   }
 
   render() {
+    let travelPosts = '';
+
+    if (this.props.posts.length > 1) {
+      travelPosts = (this.props.posts.filter(function(post) {
+        return post.category === 'Travel';
+      }));
+    }
+
+    console.log(travelPosts);
+
     return (
       <div className="travel-container">
         <Grid>
@@ -82,7 +91,8 @@ export class TravelPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
+  loggedIn: state.auth.currentUser !== null,
+  posts: state.postsData.posts
 });
 
 export default connect(mapStateToProps)(TravelPage);

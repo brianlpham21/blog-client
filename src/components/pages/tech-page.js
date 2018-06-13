@@ -1,21 +1,30 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {clearAuth} from '../../actions/auth';
-import {clearAuthToken} from '../../local-storage';
 
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
+import {fetchPostsData} from '../../actions/posts';
+
 import './tech-page.css';
 
 export class TechPage extends React.Component {
-  logOut() {
-    this.props.dispatch(clearAuth());
-    clearAuthToken();
+  componentDidMount() {
+    this.props.dispatch(fetchPostsData());
   }
 
   render() {
+    let techPosts = '';
+
+    if (this.props.posts.length > 1) {
+      techPosts = (this.props.posts.filter(function(post) {
+        return post.category === 'Tech';
+      }));
+    }
+
+    console.log(techPosts);
+
     return (
       <div className="tech-container">
         <Grid>
@@ -82,7 +91,8 @@ export class TechPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
+  loggedIn: state.auth.currentUser !== null,
+  posts: state.postsData.posts
 });
 
 export default connect(mapStateToProps)(TechPage);
