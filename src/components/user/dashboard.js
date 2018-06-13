@@ -4,6 +4,8 @@ import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../../actions/protected-data';
 import {fetchPostsData} from '../../actions/posts';
 
+import DashboardPost from './dashboard-post';
+
 import {Grid, Row, Col, Button} from 'react-bootstrap';
 
 import './dashboard.css';
@@ -15,6 +17,19 @@ export class Dashboard extends React.Component {
   }
 
   render() {
+    let dashboardPosts = '';
+
+    dashboardPosts = this.props.posts.map((post, index) => {
+      return <DashboardPost key={index} {...post}/>
+    });
+
+    if (dashboardPosts.length < 1) {
+      return (
+        <div>
+        </div>
+      )
+    }
+
     return (
       <div className="dashboard">
         <Grid>
@@ -22,18 +37,11 @@ export class Dashboard extends React.Component {
             <h3>Welcome to your dashboard, {this.props.name}!</h3>
           </Row>
           <Row>
-            <Col md={4}>
+            <Col>
               <Button bsStyle="success" block>Add Post</Button>
             </Col>
-            <Col md={4}>
-              <Button bsStyle="primary" block>Edit Post</Button>
-            </Col>
-            <Col md={4}>
-              <Button bsStyle="danger" block>Delete Post</Button>
-            </Col>
           </Row>
-          <Row>
-          </Row>
+          {dashboardPosts}
         </Grid>
       </div>
     );
