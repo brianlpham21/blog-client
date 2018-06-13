@@ -19,8 +19,6 @@ export class MainCarousel extends React.Component {
   }
 
   render() {
-    console.log(this.props.posts);
-
     if (this.props.posts.length < 1) {
       return (
         <div></div>

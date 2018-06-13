@@ -4,6 +4,7 @@ import {Redirect} from 'react-router-dom';
 
 import MainCarousel from './main-carousel';
 import MainArticleSection from './main-article-section';
+import MainArticleSection2 from './main-article-section-2';
 import LearnAboutMe from './learn-about-me';
 
 export function LandingPage(props) {
@@ -16,7 +17,7 @@ export function LandingPage(props) {
       <MainCarousel />
       <MainArticleSection />
       <LearnAboutMe />
-      <MainArticleSection />
+      <MainArticleSection2 />
 
       <section id='instagram-feed'>
         <h2 className='instagram-feed-title'>Instagram</h2>

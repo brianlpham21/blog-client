@@ -7,7 +7,7 @@ import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reacts
 
 import {fetchPostsData} from '../actions/posts';
 
-export class MainArticleSection extends React.Component {
+export class MainArticleSection2 extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchPostsData());
   }
@@ -83,4 +83,4 @@ const mapStateToProps = state => ({
   posts: state.postsData.posts
 });
 
-export default connect(mapStateToProps)(MainArticleSection);
+export default connect(mapStateToProps)(MainArticleSection2);
