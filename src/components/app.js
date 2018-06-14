@@ -14,7 +14,7 @@ import TravelPage from './pages/travel-page';
 import TechPage from './pages/tech-page';
 import AboutPage from './pages/about-page';
 
-import PostPage from './post-page';
+import PostPage from './pages/post-page';
 
 import Footer from './footer';
 
