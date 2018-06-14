@@ -26,7 +26,7 @@ export class MainArticleSection2 extends React.Component {
             <Col md={6}>
               <Link to="#" className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={this.props.posts[7].photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[7].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[7].date || 'N/A'}</CardSubtitle>
@@ -39,7 +39,7 @@ export class MainArticleSection2 extends React.Component {
             <Col md={6}>
               <Link to="#" className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1492970471430-bc6bd7eb2b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9893bc89e46e2b77a5d8c091fbba04e9&auto=format&fit=crop&w=2855&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={this.props.posts[8].photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[8].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[8].date || 'N/A'}</CardSubtitle>
@@ -54,7 +54,7 @@ export class MainArticleSection2 extends React.Component {
             <Col md={6}>
               <Link to="#" className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1506437942396-649fac10a75b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f369ac9dee5618d9719e6b7bed221387&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={this.props.posts[9].photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[9].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[9].date || 'N/A'}</CardSubtitle>
@@ -67,7 +67,7 @@ export class MainArticleSection2 extends React.Component {
             <Col md={6}>
               <Link to="#" className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1511702771955-42b52e1cd168?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0b8ce1412e0f8646fa9f794963ab897e&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={this.props.posts[10].photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[10].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[10].date || 'N/A'}</CardSubtitle>
