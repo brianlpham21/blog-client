@@ -56,13 +56,13 @@ export class App extends React.Component {
         <NavBar />
         <Route exact path="/" component={LandingPage} />
 
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/dashboard" component={Dashboard} />
 
         <Route exact path="/category/experiences" component={ExperiencesPage} />
         <Route exact path="/category/travel" component={TravelPage} />
         <Route exact path="/category/tech" component={TechPage} />
-        <Route exact path="/about" component={AboutPage} />
+        <Route path="/about" component={AboutPage} />
 
         <Route path="/post/:id" render={({match}) => <PostPage id={match.params.id} />} />
 
