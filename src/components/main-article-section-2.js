@@ -31,7 +31,7 @@ export class MainArticleSection2 extends React.Component {
                     <CardTitle className="card-title">{this.props.posts[7].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[7].date || 'N/A'}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[7].titleSubtext || 'N/A'}</CardText>
-                    <Link to={`/post/${this.props.posts[7].id}`}><button className="article-button">Read More</button></Link>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
@@ -44,7 +44,7 @@ export class MainArticleSection2 extends React.Component {
                     <CardTitle className="card-title">{this.props.posts[8].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[8].date || 'N/A'}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[8].titleSubtext || 'N/A'}</CardText>
-                    <Link to={`/post/${this.props.posts[8].id}`}><button className="article-button">Read More</button></Link>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
@@ -59,7 +59,7 @@ export class MainArticleSection2 extends React.Component {
                     <CardTitle className="card-title">{this.props.posts[9].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[9].date || 'N/A'}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[9].titleSubtext || 'N/A'}</CardText>
-                    <Link to={`/post/${this.props.posts[9].id}`}><button className="article-button">Read More</button></Link>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
@@ -72,7 +72,7 @@ export class MainArticleSection2 extends React.Component {
                     <CardTitle className="card-title">{this.props.posts[10].title || 'N/A'}</CardTitle>
                     <CardSubtitle className="card-date">{this.props.posts[10].date || 'N/A'}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[10].titleSubtext || 'N/A'}</CardText>
-                    <Link to={`/post/${this.props.posts[10].id}`}><button className="article-button">Read More</button></Link>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
