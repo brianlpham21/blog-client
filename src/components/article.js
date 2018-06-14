@@ -14,10 +14,15 @@ export class Article extends React.Component {
 
   render() {
     const id = this.props.number;
+
     const link = '/post/' + this.props.posts[id].id;
     const photoLink = this.props.posts[id].photoLink;
     const title = this.props.posts[id].title;
-    const date = this.props.posts[id].date;
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[Number(this.props.posts[id].date.slice(5, 7)) - 1];
+    const date = `${month} ${this.props.posts[id].date.slice(8, 10)}, ${this.props.posts[id].date.slice(0,4)}`
+
     const titleSubtext = this.props.posts[id].titleSubtext;
 
     if (this.props.posts.length < 1) {
