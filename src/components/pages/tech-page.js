@@ -5,26 +5,18 @@ import {connect} from 'react-redux';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
-import {fetchPostsData} from '../../actions/posts';
+import {fetchTechPostsData} from '../../actions/posts';
 
 import './tech-page.css';
 
 export class TechPage extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchPostsData());
+    this.props.dispatch(fetchTechPostsData());
   }
 
   render() {
-    let techPosts = '';
-
-    if (this.props.posts.length > 1) {
-      techPosts = (this.props.posts.filter(function(post) {
-        return post.category === 'Tech';
-      }));
-    }
-
-    console.log(techPosts);
-
+    console.log(this.props.posts);
+    
     return (
       <div className="tech-container">
         <Grid>

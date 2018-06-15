@@ -5,26 +5,18 @@ import {connect} from 'react-redux';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
-import {fetchPostsData} from '../../actions/posts';
+import {fetchTravelPostsData} from '../../actions/posts';
 
 import './travel-page.css';
 
 export class TravelPage extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchPostsData());
+    this.props.dispatch(fetchTravelPostsData());
   }
 
   render() {
-    let travelPosts = '';
-
-    if (this.props.posts.length > 1) {
-      travelPosts = (this.props.posts.filter(function(post) {
-        return post.category === 'Travel';
-      }));
-    }
-
-    console.log(travelPosts);
-
+    console.log(this.props.posts);
+    
     return (
       <div className="travel-container">
         <Grid>

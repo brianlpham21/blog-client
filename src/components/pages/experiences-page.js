@@ -5,25 +5,17 @@ import {connect} from 'react-redux';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
-import {fetchPostsData} from '../../actions/posts';
+import {fetchExperiencesPostsData} from '../../actions/posts';
 
 import './experience-page.css';
 
 export class ExperiencesPage extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchPostsData());
+    this.props.dispatch(fetchExperiencesPostsData());
   }
 
   render() {
-    let experiencesPosts = '';
-
-    if (this.props.posts.length > 1) {
-      experiencesPosts = (this.props.posts.filter(function(post) {
-        return post.category === 'Experiences';
-      }));
-    }
-
-    console.log(experiencesPosts);
+    console.log(this.props.posts);
 
     return (
       <div className="experiences-container">
