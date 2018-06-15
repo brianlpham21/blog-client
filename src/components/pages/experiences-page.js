@@ -7,6 +7,8 @@ import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reacts
 
 import {fetchExperiencesPostsData} from '../../actions/posts';
 
+import PageArticle from './page-article';
+
 import './experience-page.css';
 
 export class ExperiencesPage extends React.Component {
@@ -36,6 +38,12 @@ export class ExperiencesPage extends React.Component {
     const date = `${month} ${this.props.posts[0].date.slice(8, 10)}, ${this.props.posts[0].date.slice(0,4)}`
 
     const photo = `${this.props.posts[0].photoLink}`;
+
+    let pagearticles = '';
+
+    pagearticles = this.props.posts.map((post, index) => {
+      return <PageArticle key={index} {...post}/>
+    })
 
     return (
       <div className="experiences-container">
@@ -104,7 +112,11 @@ export class ExperiencesPage extends React.Component {
               <button className="view-all-button " onClick={(event) => this.displayAdditionalPosts(event)}>View All</button>
             </Row>
           </div>
-          <div className="additional-posts"></div>
+          <div className="additional-posts">
+            <div className={this.state.active ? "" : "hidden"}>
+              {pagearticles}
+            </div>
+          </div>
         </Grid>
       </div>
     );
