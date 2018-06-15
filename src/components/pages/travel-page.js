@@ -15,8 +15,18 @@ export class TravelPage extends React.Component {
   }
 
   render() {
-    console.log(this.props.posts);
-    
+    if (this.props.posts.length < 1) {
+      return (
+        <div></div>
+      )
+    }
+
+    const link = '/post/' + this.props.posts[0].id;
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[Number(this.props.posts[0].date.slice(5, 7)) - 1];
+    const date = `${month} ${this.props.posts[0].date.slice(8, 10)}, ${this.props.posts[0].date.slice(0,4)}`
+
     return (
       <div className="travel-container">
         <Grid>
@@ -25,13 +35,13 @@ export class TravelPage extends React.Component {
               Travel
             </Col>
             <Col md={8} className="main-card">
-              <Link to="#" className="card-link">
+              <Link to={link} className="card-link">
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
                   <CardBody className="card-body">
-                    <CardTitle className="card-title">Article Title</CardTitle>
-                    <CardSubtitle className="card-date">Monday, June 4, 2018</CardSubtitle>
-                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <CardTitle className="card-title">{this.props.posts[0].title}</CardTitle>
+                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardText className="card-text">{this.props.posts[0].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
