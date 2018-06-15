@@ -38,7 +38,7 @@ export class Dashboard extends React.Component {
           </Row>
           <Row>
             <Col>
-              <Button bsStyle="success" block>Add Post</Button>
+              <Button bsStyle="success" href="/dashboard/add" block>Add Post</Button>
             </Col>
           </Row>
           {dashboardPosts}

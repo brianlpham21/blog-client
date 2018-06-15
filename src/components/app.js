@@ -8,6 +8,7 @@ import LandingPage from './landing-page';
 import LoginPage from './user/login-page';
 import Dashboard from './user/dashboard';
 import DashboardPostEdit from './user/dashboard-post-edit';
+import DashboardPostAdd from './user/dashboard-post-add';
 // import RegistrationPage from './user/registration-page';
 
 import ExperiencesPage from './pages/experiences-page';
@@ -60,6 +61,7 @@ export class App extends React.Component {
         <Route path="/login" component={LoginPage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/dashboard/edit/:id" render={({match}) => <DashboardPostEdit id={match.params.id} />} />
+        <Route exact path="/dashboard/add" component={DashboardPostAdd} />
 
         <Route exact path="/category/experiences" component={ExperiencesPage} />
         <Route exact path="/category/travel" component={TravelPage} />
