@@ -37,7 +37,7 @@ export class TravelPage extends React.Component {
             <Col md={8} className="main-card">
               <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1494257473705-09a5a19d04af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8630a45d2003aa0fe3d2f5ff376d9ec&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={this.props.posts[0].photoLink} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[0].title}</CardTitle>
                     <CardSubtitle className="card-date">{date}</CardSubtitle>

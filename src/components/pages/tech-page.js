@@ -37,7 +37,7 @@ export class TechPage extends React.Component {
             <Col md={8} className="main-card">
               <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://lh3.googleusercontent.com/DqTaKFYl8LqX_dPOIkz-g6iAYOdB8TqfeFRc4kSdNTJ_7hX1HTiA-j8tz9h08wLfeJ5wXlmAEucSr6zJZ5IXpWdCn2h1qN_87FgAUUdjakG5gN_oY1VOoewY9LViyANEz15dTgJ3eE7jueYtLemZB9vnq_lfMXmJZONFmWWpQZzdS8WaiOyxDjF09k9lvlY67X9P8VjSxzpWY0KPq9ljZIleWgJkXhFHoEzBVkfDa_zzS5JNMlZcovV4Qmb2nA4pvg922uGCUhbX4FPtIs-jyIjJlOEl-DajvXIj8qaZmLOFf2lGTn0kTcudk7_DOB3SBqj_xY13YLNLd29XoKizU8jTELwYexp3JfoRSY39wwxihRVM4mzvsgMtn8ioEg9FO58GKIvDOO7SQYbmZUpE7QlogDoVPJucIURtAW70qA4fhHs-ZU7wHW1b_QD5bCCGxR1Wg68BFrt5kvnekS_rTTERKl40v4cmG737RSzNZiU5S8e_wDbYlnSPaBAG3COlLyiEhSui31nkX62LWWq7-RcXoBtaANtzmWe9Mr-hs_AmGt_uc7eOnVMDZJFyVt2kRqdlXh0g29KqCJOdUxrmtzbwS7xFZLMJnaidJVA=w2856-h1606-no" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={this.props.posts[0].photoLink} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[0].title}</CardTitle>
                     <CardSubtitle className="card-date">{date}</CardSubtitle>
