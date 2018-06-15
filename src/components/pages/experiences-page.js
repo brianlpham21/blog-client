@@ -37,7 +37,7 @@ export class ExperiencesPage extends React.Component {
             <Col md={8} className="main-card">
               <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image main-card-image" top width="100%" src={this.props.posts[0].photoLink} alt="Card image cap" />
+                  <CardImg className="card-image main-card-image" top width="100%" src="" alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[0].title}</CardTitle>
                     <CardSubtitle className="card-date">{date}</CardSubtitle>
