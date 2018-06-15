@@ -28,7 +28,7 @@ export class PostPage extends React.Component {
 
     let displayedText = '';
 
-    displayedText = text.map((paragraph, index) => {
+    displayedText = text.slice(1).map((paragraph, index) => {
       return <p key={index}>{paragraph}</p>
     });
 
@@ -42,7 +42,7 @@ export class PostPage extends React.Component {
             </Row>
           </Grid>
         </Jumbotron>
-        <Grid style={{padding: "40px 60px 80px 60px"}}>
+        <Grid style={{padding: "40px 100px 80px 100px"}}>
           <Row>
             <Col md={6}>
               <h3>{date}</h3>
@@ -51,7 +51,10 @@ export class PostPage extends React.Component {
               <h3>{this.props.post[0].category}</h3>
             </Col>
           </Row>
-          <div className="post-text">{displayedText}</div>
+          <div className="post-text">
+            <p className="post-text-header">{text[0]}</p>
+            {displayedText}
+          </div>
         </Grid>
       </div>
     );

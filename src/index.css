@@ -326,3 +326,8 @@ body {
 .post-text {
   margin: 50px 0;
 }
+
+.post-text-header {
+  font-size: 18px;
+  font-weight: bold;
+}
