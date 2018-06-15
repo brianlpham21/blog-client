@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import {NavBar} from './navbar';
+import {App} from './app';
 
-describe('<NavBar/>', () => {
+describe('<App/>', () => {
   it('Renders without crashing', () => {
-    shallow(<NavBar />);
+    shallow(<App />);
   });
 });
