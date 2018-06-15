@@ -60,10 +60,10 @@ export class Footer extends React.Component {
             <Col md={2}>
               <h5>Explore</h5>
               <ul className="footer-links">
-                <a href="/about"><li>About</li></a>
-                <a href="/category/experiences"><li>Experiences</li></a>
-                <a href="/category/travel"><li>Travel</li></a>
-                <a href="/category/tech"><li>Tech</li></a>
+                <Link to="/about"><li>About</li></Link>
+                <Link to="/category/experiences"><li>Experiences</li></Link>
+                <Link to="/category/travel"><li>Travel</li></Link>
+                <Link to="/category/tech"><li>Tech</li></Link>
                 <a className="contact-link"><li onClick={this.handleShow}>Contact</li></a>
               </ul>
             </Col>
