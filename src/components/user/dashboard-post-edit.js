@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchIndividualPostData} from '../../actions/posts';
 
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Radio, Button, HelpBlock} from 'react-bootstrap';
 
 export class DashboardPostEdit extends React.Component {
   componentDidMount() {
@@ -16,17 +16,66 @@ export class DashboardPostEdit extends React.Component {
       return <div></div>;
     }
 
+    function FieldGroup({ id, label, help, ...props }) {
+      return (
+        <FormGroup controlId={id}>
+          <ControlLabel>{label}</ControlLabel>
+          <FormControl {...props} />
+          {help && <HelpBlock>{help}</HelpBlock>}
+        </FormGroup>
+      );
+    }
+
     return (
       <div className="dashboard">
         <Grid>
           <Row>
             <Col>
-              <p>{this.props.post[0].title}</p>
-              <p>{this.props.post[0].titleSubtext}</p>
-              <p>{this.props.post[0].category}</p>
-              <p>{this.props.post[0].photoLink}</p>
-              <p>{this.props.post[0].photoCaption}</p>
-              <p>{this.props.post[0].text}</p>
+              <form>
+                <FieldGroup
+                  id="formControlsText"
+                  type="text"
+                  label="Title"
+                  value={this.props.post[0].title}
+                />
+
+                <FieldGroup
+                  id="formControlsText"
+                  type="text"
+                  label="Subtext"
+                  value={this.props.post[0].titleSubtext}
+                />
+
+                <FieldGroup
+                  id="formControlsText"
+                  type="text"
+                  label="Category"
+                  value={this.props.post[0].category}
+                />
+
+                <FieldGroup
+                  id="formControlsText"
+                  type="text"
+                  label="Photo Link"
+                  value={this.props.post[0].photoLink}
+                />
+
+                <FieldGroup
+                  id="formControlsText"
+                  type="text"
+                  label="Photo Caption"
+                  value={this.props.post[0].photoCaption}
+                />
+
+                <FormGroup controlId="formControlsTextarea">
+                  <ControlLabel>Text</ControlLabel>
+                  <FormControl componentClass="textarea" value={this.props.post[0].text} />
+                </FormGroup>
+
+                <Button type="submit" bsStyle="primary">Submit</Button>
+                <Button bsStyle="danger">Delete</Button>
+                <Button>Cancel</Button>
+              </form>
             </Col>
           </Row>
         </Grid>

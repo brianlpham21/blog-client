@@ -37,7 +37,7 @@ export class Dashboard extends React.Component {
             <h3>Welcome to your dashboard, {this.props.name}!</h3>
           </Row>
           <Row>
-            <Col>
+            <Col className="add-post-button-container">
               <Button bsStyle="success" href="/dashboard/add" block>Add Post</Button>
             </Col>
           </Row>
