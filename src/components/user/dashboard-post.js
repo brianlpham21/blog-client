@@ -21,6 +21,8 @@ export class DashboardPost extends React.Component {
       return <div></div>
     }
 
+    const link = '/dashboard/edit/' + this.props.id;
+
     return (
       <Row className="dashboard-post">
         <Col md={3}>
@@ -32,9 +34,9 @@ export class DashboardPost extends React.Component {
         <Col md={3}>
           {this.props.category}
         </Col>
-        <Col md={3}>
+        <Col md={3} className="dashboard-post-buttons">
           <Button bsStyle="danger" onClick={(event) => this.deletePost(event)}>Delete</Button>
-          <Button bsStyle="primary">Edit</Button>
+          <Button bsStyle="primary" href={link}>Edit</Button>
         </Col>
       </Row>
     );
