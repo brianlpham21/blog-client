@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
-import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Radio, Button, HelpBlock} from 'react-bootstrap';
+import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap';
 
 export class DashboardPostAdd extends React.Component {
   render() {

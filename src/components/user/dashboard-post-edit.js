@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchIndividualPostData} from '../../actions/posts';
 
-import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Radio, Button, HelpBlock} from 'react-bootstrap';
+import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap';
 
 export class DashboardPostEdit extends React.Component {
   componentDidMount() {
