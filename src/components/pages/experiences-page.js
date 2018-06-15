@@ -27,6 +27,8 @@ export class ExperiencesPage extends React.Component {
     const month = months[Number(this.props.posts[0].date.slice(5, 7)) - 1];
     const date = `${month} ${this.props.posts[0].date.slice(8, 10)}, ${this.props.posts[0].date.slice(0,4)}`
 
+    const photo = `${this.props.posts[0].photoLink}`;
+
     return (
       <div className="experiences-container">
         <Grid>
@@ -37,7 +39,7 @@ export class ExperiencesPage extends React.Component {
             <Col md={8} className="main-card">
               <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image main-card-image" top width="100%" src="" alt="Card image cap" />
+                  <CardImg className="card-image main-card-image" top width="100%" src={photo} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[0].title}</CardTitle>
                     <CardSubtitle className="card-date">{date}</CardSubtitle>
