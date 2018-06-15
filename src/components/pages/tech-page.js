@@ -10,8 +10,16 @@ import {fetchTechPostsData} from '../../actions/posts';
 import './tech-page.css';
 
 export class TechPage extends React.Component {
+  state = {
+    active: false
+  }
+
   componentDidMount() {
     this.props.dispatch(fetchTechPostsData());
+  }
+
+  displayAdditionalPosts(event) {
+    this.setState({active: true});
   }
 
   render() {
@@ -56,10 +64,10 @@ export class TechPage extends React.Component {
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1492970471430-bc6bd7eb2b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9893bc89e46e2b77a5d8c091fbba04e9&auto=format&fit=crop&w=2855&q=80" alt="Card image cap" />
                   <CardBody className="card-body">
-                  <CardTitle className="card-title">Article Title</CardTitle>
-                  <CardSubtitle className="card-date">Date</CardSubtitle>
-                  <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <button className="article-button">Read More</button>
+                    <CardTitle className="card-title">Article Title</CardTitle>
+                    <CardSubtitle className="card-date">Date</CardSubtitle>
+                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
@@ -69,10 +77,10 @@ export class TechPage extends React.Component {
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1506437942396-649fac10a75b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f369ac9dee5618d9719e6b7bed221387&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
                   <CardBody className="card-body">
-                  <CardTitle className="card-title">Article Title</CardTitle>
-                  <CardSubtitle className="card-date">Date</CardSubtitle>
-                  <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <button className="article-button">Read More</button>
+                    <CardTitle className="card-title">Article Title</CardTitle>
+                    <CardSubtitle className="card-date">Date</CardSubtitle>
+                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
@@ -82,15 +90,21 @@ export class TechPage extends React.Component {
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1511702771955-42b52e1cd168?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0b8ce1412e0f8646fa9f794963ab897e&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
                   <CardBody className="card-body">
-                  <CardTitle className="card-title">Article Title</CardTitle>
-                  <CardSubtitle className="card-date">Date</CardSubtitle>
-                  <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
-                  <button className="article-button">Read More</button>
+                    <CardTitle className="card-title">Article Title</CardTitle>
+                    <CardSubtitle className="card-date">Date</CardSubtitle>
+                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
             </Col>
           </Row>
+          <div className={this.state.active ? "hidden" : ""}>
+            <Row className="view-all-button-container">
+              <button className="view-all-button" onClick={(event) => this.displayAdditionalPosts(event)}>View All</button>
+            </Row>
+          </div>
+          <div className="additional-posts"></div>
         </Grid>
       </div>
     );

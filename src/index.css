@@ -291,3 +291,26 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.view-all-button-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.view-all-button {
+  background: transparent;
+  padding: 15px 35px;
+  border-radius: 3px;
+  transition: all .8s;
+  font-size: 16px;
+}
+
+.view-all-button:hover {
+  color: white;
+  background: rgba(0, 0, 0, .6);
+  padding: 15px 50px;
+}
+
+.hidden {
+  display: none;
+}
