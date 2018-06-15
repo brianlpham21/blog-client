@@ -43,6 +43,18 @@ export const fetchTechPostsDataSuccess = posts => ({
     posts
 });
 
+export const DELETE_POST_SUCCESS = 'DELETE_POST_SUCCESS';
+export const deletePostSuccess = error => ({
+    type: DELETE_POST_SUCCESS,
+    error
+});
+
+export const DELETE_POST_ERROR = 'DELETE_POST_ERROR';
+export const deletePostError = error => ({
+    type: DELETE_POST_ERROR,
+    error
+});
+
 export const fetchPostsData = () => (dispatch, getState) => {
     return fetch(`${API_BASE_URL}/posts`, {
         method: 'GET'
@@ -104,3 +116,17 @@ export const fetchTechPostsData = () => (dispatch, getState) => {
             dispatch(fetchPostsDataError(err));
         });
 };
+
+export const deleteIndividualPost = (post_id) => (dispatch, getState) => {
+    const url = `${API_BASE_URL}/posts/` + post_id;
+
+    return fetch(`${url}`, {
+        method: 'DELETE'
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((data) => dispatch(deletePostSuccess(data)))
+        .catch(err => {
+            dispatch(deletePostError(err));
+        });
+}

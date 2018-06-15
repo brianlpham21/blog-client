@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../../actions/protected-data';
 import {fetchPostsData} from '../../actions/posts';
 
 import DashboardPost from './dashboard-post';
@@ -12,16 +11,17 @@ import './dashboard.css';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchProtectedData());
     this.props.dispatch(fetchPostsData());
   }
 
   render() {
     let dashboardPosts = '';
 
-    dashboardPosts = this.props.posts.map((post, index) => {
-      return <DashboardPost key={index} {...post}/>
-    });
+    if (this.props.posts.length > 1) {
+      dashboardPosts = this.props.posts.map((post, index) => {
+        return <DashboardPost key={index} {...post}/>
+      });
+    }
 
     if (dashboardPosts.length < 1) {
       return (
@@ -53,7 +53,6 @@ const mapStateToProps = state => {
   return {
     username: state.auth.currentUser.username,
     name: `${currentUser.firstName} ${currentUser.lastName}`,
-    protectedData: state.protectedData.data,
     posts: state.postsData.posts
   };
 };

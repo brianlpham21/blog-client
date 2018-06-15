@@ -1,12 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
+import {deleteIndividualPost} from '../../actions/posts';
 
 import {Row, Col, Button} from 'react-bootstrap';
 
 import './dashboard-post.css';
 
 export class DashboardPost extends React.Component {
+  deletePost(event) {
+    const result = window.confirm('Are you sure?')
+    if (result) {
+      this.props.dispatch(deleteIndividualPost(this.props.id))
+        .then(data => window.location.reload());
+    }
+  }
+
   render() {
     if (!(this.props.category)) {
       return <div></div>
@@ -24,7 +33,7 @@ export class DashboardPost extends React.Component {
           {this.props.category}
         </Col>
         <Col md={3}>
-          <Button bsStyle="danger">Delete</Button>
+          <Button bsStyle="danger" onClick={(event) => this.deletePost(event)}>Delete</Button>
           <Button bsStyle="primary">Edit</Button>
         </Col>
       </Row>

@@ -5,7 +5,9 @@ import {
     FETCH_INDIVIDUAL_POST_DATA_ERROR,
     FETCH_TRAVEL_POSTS_SUCCESS,
     FETCH_EXPERIENCES_POSTS_SUCCESS,
-    FETCH_TECH_POSTS_SUCCESS
+    FETCH_TECH_POSTS_SUCCESS,
+    DELETE_POST_SUCCESS,
+    DELETE_POST_ERROR
 } from '../actions/posts';
 
 const initialState = {
@@ -46,6 +48,14 @@ export default function reducer(state = initialState, action) {
     } else if (action.type === FETCH_TECH_POSTS_SUCCESS) {
         return Object.assign({}, state, {
             posts: action.posts,
+            error: action.error
+        });
+    } else if (action.type === DELETE_POST_SUCCESS) {
+        return Object.assign({}, state, {
+            error: action.error
+        });
+    } else if (action.type === DELETE_POST_ERROR) {
+        return Object.assign({}, state, {
             error: action.error
         });
     }
