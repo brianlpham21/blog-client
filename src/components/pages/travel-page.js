@@ -38,10 +38,13 @@ export class TravelPage extends React.Component {
     const date = `${month} ${this.props.posts[0].date.slice(8, 10)}, ${this.props.posts[0].date.slice(0,4)}`
 
     const photo = `${this.props.posts[0].photoLink}`;
+    const photo1 = `${this.props.posts[1].photoLink}`;
+    const photo2 = `${this.props.posts[2].photoLink}`;
+    const photo3 = `${this.props.posts[3].photoLink}`;
 
     let pagearticles = '';
 
-    pagearticles = this.props.posts.map((post, index) => {
+    pagearticles = this.props.posts.slice(4).map((post, index) => {
       return <PageArticle key={index} {...post}/>
     })
 
@@ -68,39 +71,39 @@ export class TravelPage extends React.Component {
           </Row>
           <Row>
             <Col md={4}>
-              <Link to="#" className="card-link">
+              <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1492970471430-bc6bd7eb2b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9893bc89e46e2b77a5d8c091fbba04e9&auto=format&fit=crop&w=2855&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={photo1} alt="Card image cap" />
                   <CardBody className="card-body">
-                    <CardTitle className="card-title">Article Title</CardTitle>
-                    <CardSubtitle className="card-date">Date</CardSubtitle>
-                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <CardTitle className="card-title">{this.props.posts[1].title}</CardTitle>
+                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardText className="card-text">{this.props.posts[1].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
             </Col>
             <Col md={4}>
-              <Link to="#" className="card-link">
+              <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1506437942396-649fac10a75b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f369ac9dee5618d9719e6b7bed221387&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={photo2} alt="Card image cap" />
                   <CardBody className="card-body">
-                    <CardTitle className="card-title">Article Title</CardTitle>
-                    <CardSubtitle className="card-date">Date</CardSubtitle>
-                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <CardTitle className="card-title">{this.props.posts[2].title}</CardTitle>
+                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardText className="card-text">{this.props.posts[2].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
               </Link>
             </Col>
             <Col md={4}>
-              <Link to="#" className="card-link">
+              <Link to={link} className="card-link">
                 <Card className="card">
-                  <CardImg className="card-image" top width="100%" src="https://images.unsplash.com/photo-1511702771955-42b52e1cd168?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0b8ce1412e0f8646fa9f794963ab897e&auto=format&fit=crop&w=1950&q=80" alt="Card image cap" />
+                  <CardImg className="card-image" top width="100%" src={photo3} alt="Card image cap" />
                   <CardBody className="card-body">
-                    <CardTitle className="card-title">Article Title</CardTitle>
-                    <CardSubtitle className="card-date">Date</CardSubtitle>
-                    <CardText className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</CardText>
+                    <CardTitle className="card-title">{this.props.posts[3].title}</CardTitle>
+                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardText className="card-text">{this.props.posts[3].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
                 </Card>
