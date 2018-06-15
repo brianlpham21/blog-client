@@ -314,3 +314,11 @@ body {
 .hidden {
   display: none;
 }
+
+.additional-posts {
+  margin-top: 70px;
+}
+
+.page-article {
+  margin-top: 30px;
+}

@@ -18,7 +18,7 @@ export class PageArticle extends React.Component {
     const titleSubtext = this.props.titleSubtext;
 
     return (
-      <Col md={4}>
+      <Col md={4} className="page-article">
         <Link to={link} className="card-link">
           <Card className="card">
             <CardImg className="card-image" top width="100%" src={photoLink || "https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png"} alt="Card image cap" />
