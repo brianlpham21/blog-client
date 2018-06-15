@@ -5,6 +5,11 @@ import requiresLogin from './requires-login';
 import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap';
 
 export class DashboardPostAdd extends React.Component {
+  addPost(event) {
+    event.preventDefault();
+    console.log('added')
+  }
+
   render() {
     function FieldGroup({ id, label, help, ...props }) {
       return (
@@ -62,8 +67,8 @@ export class DashboardPostAdd extends React.Component {
                   <FormControl componentClass="textarea" placeholder="Text" />
                 </FormGroup>
 
-                <Button type="submit" bsStyle="primary">Submit</Button>
-                <Button>Cancel</Button>
+                <Button type="submit" bsStyle="primary" onClick={(event) => this.addPost(event)}>Submit</Button>
+                <Button href="/">Cancel</Button>
               </form>
             </Col>
           </Row>

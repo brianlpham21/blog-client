@@ -11,6 +11,16 @@ export class DashboardPostEdit extends React.Component {
     this.props.dispatch(fetchIndividualPostData(search_id));
   }
 
+  editPost(event) {
+    event.preventDefault();
+    console.log('edited')
+  }
+
+  deletePost(event) {
+    event.preventDefault();
+    console.log('deleted')
+  }
+
   render() {
     if (!(this.props.post[0])) {
       return <div></div>;
@@ -36,45 +46,45 @@ export class DashboardPostEdit extends React.Component {
                   id="formControlsText"
                   type="text"
                   label="Title"
-                  value={this.props.post[0].title}
+                  defaultValue={this.props.post[0].title}
                 />
 
                 <FieldGroup
                   id="formControlsText"
                   type="text"
                   label="Subtext"
-                  value={this.props.post[0].titleSubtext}
+                  defaultValue={this.props.post[0].titleSubtext}
                 />
 
                 <FieldGroup
                   id="formControlsText"
                   type="text"
                   label="Category"
-                  value={this.props.post[0].category}
+                  defaultValue={this.props.post[0].category}
                 />
 
                 <FieldGroup
                   id="formControlsText"
                   type="text"
                   label="Photo Link"
-                  value={this.props.post[0].photoLink}
+                  defaultValue={this.props.post[0].photoLink}
                 />
 
                 <FieldGroup
                   id="formControlsText"
                   type="text"
                   label="Photo Caption"
-                  value={this.props.post[0].photoCaption}
+                  defaultValue={this.props.post[0].photoCaption}
                 />
 
                 <FormGroup controlId="formControlsTextarea">
                   <ControlLabel>Text</ControlLabel>
-                  <FormControl componentClass="textarea" value={this.props.post[0].text} />
+                  <FormControl componentClass="textarea" defaultValue={this.props.post[0].text} />
                 </FormGroup>
 
-                <Button type="submit" bsStyle="primary">Submit</Button>
-                <Button bsStyle="danger">Delete</Button>
-                <Button>Cancel</Button>
+                <Button type="submit" bsStyle="primary" onClick={(event) => this.editPost(event)}>Submit</Button>
+                <Button bsStyle="danger" onClick={(event) => this.deletePost(event)}>Delete</Button>
+                <Button href="/">Cancel</Button>
               </form>
             </Col>
           </Row>

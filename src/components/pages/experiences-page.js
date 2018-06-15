@@ -114,7 +114,7 @@ export class ExperiencesPage extends React.Component {
           </Row>
           <div className={this.state.active ? "hidden" : ""}>
             <Row className="view-all-button-container">
-              <button className="view-all-button " onClick={(event) => this.displayAdditionalPosts(event)}>View All</button>
+              <button className="view-all-button" onClick={(event) => this.displayAdditionalPosts(event)}>View All</button>
             </Row>
           </div>
           <div className="additional-posts">
