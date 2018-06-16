@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchIndividualPostData} from '../../actions/posts';
+import {deleteIndividualPost} from '../../actions/posts';
 
 import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap';
 
@@ -18,7 +19,12 @@ export class DashboardPostEdit extends React.Component {
 
   deletePost(event) {
     event.preventDefault();
-    console.log('deleted')
+
+    const result = window.confirm('Are you sure?')
+    if (result) {
+      this.props.dispatch(deleteIndividualPost(this.props.post[0].id))
+        .then(data => window.location.replace('/'));
+    }
   }
 
   render() {
