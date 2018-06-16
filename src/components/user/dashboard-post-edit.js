@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchIndividualPostData} from '../../actions/posts';
+import {editPost} from '../../actions/posts';
 import {deleteIndividualPost} from '../../actions/posts';
 
 import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap';
@@ -14,7 +15,18 @@ export class DashboardPostEdit extends React.Component {
 
   editPost(event) {
     event.preventDefault();
-    console.log('edited')
+
+    const title = document.getElementById('title').value;
+    const subtext = document.getElementById('subtext').value;
+    const category = document.getElementById('category').value;
+    const photoLink = document.getElementById('photoLink').value;
+    const photoCaption = document.getElementById('photoCaption').value;
+    const text = document.getElementById('text').value;
+
+    console.log(text);
+
+    this.props.dispatch(editPost(this.props.post[0].id, title, subtext, category, photoLink, photoCaption, text))
+      .then(data => window.location.replace('/'));
   }
 
   deletePost(event) {
@@ -49,43 +61,43 @@ export class DashboardPostEdit extends React.Component {
             <Col>
               <form>
                 <FieldGroup
-                  id="formControlsText"
+                  id="title"
                   type="text"
                   label="Title"
-                  defaultValue={this.props.post[0].title}
+                  defaultValue={this.props.post[0].title || " "}
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="subtext"
                   type="text"
                   label="Subtext"
-                  defaultValue={this.props.post[0].titleSubtext}
+                  defaultValue={this.props.post[0].titleSubtext || " "}
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="category"
                   type="text"
                   label="Category"
-                  defaultValue={this.props.post[0].category}
+                  defaultValue={this.props.post[0].category || " "}
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="photoLink"
                   type="text"
                   label="Photo Link"
-                  defaultValue={this.props.post[0].photoLink}
+                  defaultValue={this.props.post[0].photoLink || " "}
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="photoCaption"
                   type="text"
                   label="Photo Caption"
-                  defaultValue={this.props.post[0].photoCaption}
+                  defaultValue={this.props.post[0].photoCaption || " "}
                 />
 
-                <FormGroup controlId="formControlsTextarea">
+                <FormGroup controlId="text">
                   <ControlLabel>Text</ControlLabel>
-                  <FormControl componentClass="textarea" defaultValue={this.props.post[0].text} />
+                  <FormControl componentClass="textarea" defaultValue={this.props.post[0].text || " "} />
                 </FormGroup>
 
                 <Button className="submit-button" type="submit" bsStyle="primary" onClick={(event) => this.editPost(event)}>Submit</Button>

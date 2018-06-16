@@ -13,6 +13,18 @@ export const addPostError = error => ({
     error
 });
 
+export const EDIT_POST_SUCCESS = 'EDIT_POST_SUCCESS';
+export const editPostSuccess = editPostData => ({
+    type: EDIT_POST_SUCCESS,
+    editPostData
+});
+
+export const EDIT_POST_ERROR = 'EDIT_POST_ERROR';
+export const editPostError = error => ({
+    type: EDIT_POST_ERROR,
+    error
+});
+
 export const FETCH_POSTS_DATA_SUCCESS = 'FETCH_POSTS_DATA_SUCCESS';
 export const fetchPostsDataSuccess = posts => ({
     type: FETCH_POSTS_DATA_SUCCESS,
@@ -80,6 +92,24 @@ export const addPost = (title, subtext, category, photoLink, photoCaption, text)
         .then((data) => dispatch(addPostSuccess(data)))
         .catch(err => {
             dispatch(addPostError(err));
+        });
+};
+
+export const editPost = (id, title, subtext, category, photoLink, photoCaption, text) => (dispatch, getState) => {
+    const url = `${API_BASE_URL}/posts/` + id;
+
+    return fetch(`${url}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': `application/json`
+        },
+        body: JSON.stringify({title: title, titleSubtext: subtext, category: category, photoLink: photoLink, photoCaption: photoCaption, text: text})
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((data) => dispatch(editPostSuccess(data)))
+        .catch(err => {
+            dispatch(editPostError(err));
         });
 };
 
