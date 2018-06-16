@@ -1,6 +1,18 @@
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
 
+export const ADD_POST_SUCCESS = 'ADD_POST_SUCCESS';
+export const addPostSuccess = addPostData => ({
+    type: ADD_POST_SUCCESS,
+    addPostData
+});
+
+export const ADD_POST_ERROR = 'ADD_POST_ERROR';
+export const addPostError = error => ({
+    type: ADD_POST_ERROR,
+    error
+});
+
 export const FETCH_POSTS_DATA_SUCCESS = 'FETCH_POSTS_DATA_SUCCESS';
 export const fetchPostsDataSuccess = posts => ({
     type: FETCH_POSTS_DATA_SUCCESS,
@@ -54,6 +66,22 @@ export const deletePostError = error => ({
     type: DELETE_POST_ERROR,
     error
 });
+
+export const addPost = (title, subtext, category, photoLink, photoCaption, text) => (dispatch, getState) => {
+    return fetch(`${API_BASE_URL}/posts`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': `application/json`
+        },
+        body: JSON.stringify({title: title, titleSubtext: subtext, category: category, photoLink: photoLink, photoCaption: photoCaption, text: text})
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((data) => dispatch(addPostSuccess(data)))
+        .catch(err => {
+            dispatch(addPostError(err));
+        });
+};
 
 export const fetchPostsData = () => (dispatch, getState) => {
     return fetch(`${API_BASE_URL}/posts`, {

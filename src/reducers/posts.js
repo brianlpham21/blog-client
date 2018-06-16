@@ -1,4 +1,6 @@
 import {
+    ADD_POST_SUCCESS,
+    ADD_POST_ERROR,
     FETCH_POSTS_DATA_SUCCESS,
     FETCH_POSTS_DATA_ERROR,
     FETCH_INDIVIDUAL_POST_DATA_SUCCESS,
@@ -55,6 +57,15 @@ export default function reducer(state = initialState, action) {
             error: action.error
         });
     } else if (action.type === DELETE_POST_ERROR) {
+        return Object.assign({}, state, {
+            error: action.error
+        });
+    } else if (action.type === ADD_POST_SUCCESS) {
+        return Object.assign({}, state, {
+            addPostData: action.addPostData,
+            error: action.error
+        });
+    } else if (action.type === ADD_POST_ERROR) {
         return Object.assign({}, state, {
             error: action.error
         });

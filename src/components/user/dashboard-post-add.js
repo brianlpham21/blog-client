@@ -2,12 +2,23 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
+import {addPost} from '../../actions/posts';
+
 import {Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap';
 
 export class DashboardPostAdd extends React.Component {
   addPost(event) {
     event.preventDefault();
-    console.log('added')
+
+    const title = document.getElementById('title').value;
+    const subtext = document.getElementById('subtext').value;
+    const category = document.getElementById('category').value;
+    const photoLink = document.getElementById('photoLink').value;
+    const photoCaption = document.getElementById('photoCaption').value;
+    const text = document.getElementById('text').value;
+
+    this.props.dispatch(addPost(title, subtext, category, photoLink, photoCaption, text))
+      .then(data => window.location.replace('/'));
   }
 
   render() {
@@ -28,46 +39,46 @@ export class DashboardPostAdd extends React.Component {
             <Col>
               <form>
                 <FieldGroup
-                  id="formControlsText"
+                  id="title"
                   type="text"
                   label="Title"
                   placeholder="Title"
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="subtext"
                   type="text"
                   label="Subtext"
                   placeholder="Subtext"
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="category"
                   type="text"
                   label="Category"
                   placeholder="Category"
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="photoLink"
                   type="text"
                   label="Photo Link"
                   placeholder="Photo Link"
                 />
 
                 <FieldGroup
-                  id="formControlsText"
+                  id="photoCaption"
                   type="text"
                   label="Photo Caption"
                   placeholder="Photo Caption"
                 />
 
-                <FormGroup controlId="formControlsTextarea">
+                <FormGroup controlId="text">
                   <ControlLabel>Text</ControlLabel>
                   <FormControl componentClass="textarea" placeholder="Text" />
                 </FormGroup>
 
-                <Button type="submit" bsStyle="primary" onClick={(event) => this.addPost(event)}>Submit</Button>
+                <Button className="submit-button" type="submit" bsStyle="primary" onClick={(event) => this.addPost(event)}>Submit</Button>
                 <Button href="/">Cancel</Button>
               </form>
             </Col>

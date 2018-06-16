@@ -82,8 +82,8 @@ export class DashboardPostEdit extends React.Component {
                   <FormControl componentClass="textarea" defaultValue={this.props.post[0].text} />
                 </FormGroup>
 
-                <Button type="submit" bsStyle="primary" onClick={(event) => this.editPost(event)}>Submit</Button>
-                <Button bsStyle="danger" onClick={(event) => this.deletePost(event)}>Delete</Button>
+                <Button className="submit-button" type="submit" bsStyle="primary" onClick={(event) => this.editPost(event)}>Submit</Button>
+                <Button className="delete-button" bsStyle="danger" onClick={(event) => this.deletePost(event)}>Delete</Button>
                 <Button href="/">Cancel</Button>
               </form>
             </Col>

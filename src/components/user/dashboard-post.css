@@ -6,6 +6,18 @@
   align-items: center;
 }
 
+.dashboard-post-buttons {
+  text-align: right;
+}
+
 .dashboard-post-buttons *:not(:last-child) {
+  margin-right: 5px;
+}
+
+.delete-button {
+  margin-right: 5px;
+}
+
+.submit-button {
   margin-right: 5px;
 }

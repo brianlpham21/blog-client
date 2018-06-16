@@ -29,16 +29,16 @@ export class DashboardPost extends React.Component {
 
     return (
       <Row className="dashboard-post">
-        <Col md={3}>
+        <Col md={5}>
           {this.props.title}
         </Col>
         <Col md={3}>
           {date}
         </Col>
-        <Col md={3}>
+        <Col md={2}>
           {this.props.category}
         </Col>
-        <Col md={3} className="dashboard-post-buttons">
+        <Col md={2} className="dashboard-post-buttons">
           <Button bsStyle="danger" onClick={(event) => this.deletePost(event)}>Delete</Button>
           <Button bsStyle="primary" href={link}>Edit</Button>
         </Col>
