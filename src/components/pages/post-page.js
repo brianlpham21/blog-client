@@ -53,6 +53,8 @@ export class PostPage extends React.Component {
           </Row>
           <div className="post-text">
             <p className="post-text-header">{text[0]}</p>
+            <br />
+            <br />
             {displayedText}
           </div>
         </Grid>
