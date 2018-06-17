@@ -18,7 +18,7 @@ export class Footer extends React.Component {
               <img src={logo} alt="logo" className="footer-logo" />
               <ul className="footer-links footer-information">
                 <li><a href="mailto:brianlpham21@gmail.com"><i className="far fa-envelope"></i><span className="footer-text"> brianlpham21@gmail.com</span></a></li>
-                <li><a href="http://www.brianpham.co" target="_blank"><i className="far fa-address-card"></i><span className="footer-text">Portfolio Website</span></a></li>
+                <li><a href="http://www.brianpham.co" target="_blank" rel="noopener noreferrer"><i className="far fa-address-card"></i><span className="footer-text">Portfolio Website</span></a></li>
                 <li><i className="fas fa-map-marker-alt"></i><span className="footer-text"> Orange County, CA</span></li>
               </ul>
             </Col>
