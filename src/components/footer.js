@@ -9,42 +9,7 @@ import logo from '../images/adventures-logo-md.png';
 import './footer.css';
 
 export class Footer extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-
-    this.state = {
-      show: false
-    };
-  }
-
-  handleClose() {
-    this.setState({ show: false });
-  }
-
-  handleShow() {
-    this.setState({ show: true });
-  }
-
-  handleSubmit() {
-    console.log('submitted');
-    this.setState({ show: false });
-  }
-
   render() {
-    function FieldGroup({ id, label, help, ...props }) {
-      return (
-        <FormGroup controlId={id}>
-          <ControlLabel>{label}</ControlLabel>
-          <FormControl {...props} />
-          {help && <HelpBlock>{help}</HelpBlock>}
-        </FormGroup>
-      );
-    }
-
     return (
       <div className="footer-container">
         <Grid>
@@ -52,9 +17,9 @@ export class Footer extends React.Component {
             <Col md={4}>
               <img src={logo} alt="logo" className="footer-logo" />
               <ul className="footer-links footer-information">
-                <li><a href="mailto:brianlpham21@gmail.com"><i className="far fa-envelope"></i><span className="footer-text">brianlpham21@gmail.com</span></a></li>
+                <li><a href="mailto:brianlpham21@gmail.com"><i className="far fa-envelope"></i><span className="footer-text"> brianlpham21@gmail.com</span></a></li>
+                <li><a href="http://www.brianpham.co" target="_blank"><i className="far fa-address-card"></i><span className="footer-text">Portfolio Website</span></a></li>
                 <li><i className="fas fa-map-marker-alt"></i><span className="footer-text"> Orange County, CA</span></li>
-                <li></li>
               </ul>
             </Col>
             <Col md={2}>
@@ -64,7 +29,6 @@ export class Footer extends React.Component {
                 <a href="/category/experiences"><li>Experiences</li></a>
                 <a href="/category/travel"><li>Travel</li></a>
                 <a href="/category/tech"><li>Tech</li></a>
-                <a className="contact-link"><li onClick={this.handleShow}>Contact</li></a>
               </ul>
             </Col>
             <Col md={2}>
@@ -89,37 +53,6 @@ export class Footer extends React.Component {
           </Col>
           </Row>
         </Grid>
-
-        <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Contact Form</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>Hey! Please let me know what you think.</p>
-            <form>
-              <FieldGroup
-                id="formControlsText"
-                type="name"
-                label="Name"
-                placeholder="Enter your name"
-              />
-              <FieldGroup
-                id="formControlsEmail"
-                type="email"
-                label="Email address"
-                placeholder="Enter your email"
-              />
-              <FormGroup controlId="formControlsTextarea">
-                <ControlLabel>Textarea</ControlLabel>
-                <FormControl componentClass="textarea" placeholder="textarea" />
-              </FormGroup>
-            </form>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.handleSubmit} disabled>Submit</Button>
-            <Button onClick={this.handleClose}>Close</Button>
-          </Modal.Footer>
-        </Modal>
       </div>
     );
   }
