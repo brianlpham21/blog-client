@@ -15,12 +15,12 @@
 }
 
 .about-image {
-  padding: 30px;
+  padding: 35px;
   transition: all .2s;
 }
 
 .about-image:hover {
-  padding: 25px;
+  padding: 30px;
 }
 
 .about-panel {
