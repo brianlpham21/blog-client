@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import {Grid, Row, Col, Modal, Button, HelpBlock, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 
 import logo from '../images/adventures-logo-md.png';
 
