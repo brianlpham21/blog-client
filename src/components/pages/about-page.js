@@ -30,7 +30,7 @@ export class AboutPage extends React.Component {
           </Row>
           <Row className="about-subsection">
             <Col md={3}>
-              <Panel>
+              <Panel className="about-panel">
                 <Panel.Heading className="about-title">
                   <Panel.Title className="about-title-icon"><i className="fas fa-adjust fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Web Developer</Panel.Title>
@@ -39,7 +39,7 @@ export class AboutPage extends React.Component {
               </Panel>
             </Col>
             <Col md={3}>
-              <Panel>
+              <Panel className="about-panel">
                 <Panel.Heading className="about-title">
                   <Panel.Title className="about-title-icon"><i className="fas fa-adjust fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Beer Connoisseur</Panel.Title>
@@ -48,19 +48,19 @@ export class AboutPage extends React.Component {
               </Panel>
             </Col>
             <Col md={3}>
-              <Panel>
+              <Panel className="about-panel">
                 <Panel.Heading className="about-title">
                   <Panel.Title className="about-title-icon"><i className="fas fa-adjust fa-2x"></i></Panel.Title>
-                  <Panel.Title componentClass="h3">Football Fan</Panel.Title>
+                  <Panel.Title componentClass="h3">Football Diehard</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</Panel.Body>
               </Panel>
             </Col>
             <Col md={3}>
-              <Panel>
+              <Panel className="about-panel">
                 <Panel.Heading className="about-title">
                   <Panel.Title className="about-title-icon"><i className="fas fa-adjust fa-2x"></i></Panel.Title>
-                  <Panel.Title componentClass="h3">Panel heading</Panel.Title>
+                  <Panel.Title componentClass="h3">Fitness Freak</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</Panel.Body>
               </Panel>
