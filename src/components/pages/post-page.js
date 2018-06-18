@@ -42,7 +42,7 @@ export class PostPage extends React.Component {
             </Row>
           </Grid>
         </Jumbotron>
-        <Grid style={{padding: "40px 250px 80px 250px"}}>
+        <Grid style={{padding: "40px 200px 80px 200px"}}>
           <Row>
             <Col md={6}>
               <h3>{date}</h3>
@@ -53,7 +53,6 @@ export class PostPage extends React.Component {
           </Row>
           <div className="post-text">
             <p className="post-text-header">{text[0]}</p>
-            <br />
             <br />
             {displayedText}
           </div>
