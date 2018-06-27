@@ -32,10 +32,19 @@ export class ExperiencesPage extends React.Component {
     }
 
     const link = '/post/' + this.props.posts[0].id;
+    const link2 = '/post/' + this.props.posts[1].id;
+    const link3 = '/post/' + this.props.posts[2].id;
+    const link4 = '/post/' + this.props.posts[3].id;
 
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const month = months[Number(this.props.posts[0].date.slice(5, 7)) - 1];
-    const date = `${month} ${this.props.posts[0].date.slice(8, 10)}, ${this.props.posts[0].date.slice(0,4)}`
+    const month2 = months[Number(this.props.posts[1].date.slice(5, 7)) - 1];
+    const month3 = months[Number(this.props.posts[2].date.slice(5, 7)) - 1];
+    const month4 = months[Number(this.props.posts[3].date.slice(5, 7)) - 1];
+    const date = `${month} ${this.props.posts[0].date.slice(8, 10)}, ${this.props.posts[0].date.slice(0,4)}`;
+    const date2 = `${month2} ${this.props.posts[1].date.slice(8, 10)}, ${this.props.posts[1].date.slice(0,4)}`;
+    const date3 = `${month3} ${this.props.posts[2].date.slice(8, 10)}, ${this.props.posts[2].date.slice(0,4)}`;
+    const date4 = `${month4} ${this.props.posts[3].date.slice(8, 10)}, ${this.props.posts[3].date.slice(0,4)}`;
 
     const photo = `${this.props.posts[0].photoLink}`;
     const photo1 = `${this.props.posts[1].photoLink}`;
@@ -73,12 +82,12 @@ export class ExperiencesPage extends React.Component {
           </Row>
           <Row>
             <Col md={4}>
-              <Link to={link} className="card-link">
+              <Link to={link2} className="card-link">
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src={photo1} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[1].title}</CardTitle>
-                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardSubtitle className="card-date">{date2}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[1].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
@@ -86,12 +95,12 @@ export class ExperiencesPage extends React.Component {
               </Link>
             </Col>
             <Col md={4}>
-              <Link to={link} className="card-link">
+              <Link to={link3} className="card-link">
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src={photo2} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[2].title}</CardTitle>
-                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardSubtitle className="card-date">{date3}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[2].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
@@ -99,12 +108,12 @@ export class ExperiencesPage extends React.Component {
               </Link>
             </Col>
             <Col md={4}>
-              <Link to={link} className="card-link">
+              <Link to={link4} className="card-link">
                 <Card className="card">
                   <CardImg className="card-image" top width="100%" src={photo3} alt="Card image cap" />
                   <CardBody className="card-body">
                     <CardTitle className="card-title">{this.props.posts[3].title}</CardTitle>
-                    <CardSubtitle className="card-date">{date}</CardSubtitle>
+                    <CardSubtitle className="card-date">{date4}</CardSubtitle>
                     <CardText className="card-text">{this.props.posts[3].titleSubtext}</CardText>
                     <button className="article-button">Read More</button>
                   </CardBody>
