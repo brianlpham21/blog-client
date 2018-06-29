@@ -33,9 +33,8 @@ export class LandingPage extends React.Component {
         <MainArticleSection2 />
 
         <section id='instagram-feed'>
-          <div id='instafeed'>
-            <h2 className='instagram-feed-title'>Instagram</h2>
-          </div>
+          <h2 class='instagram-feed-title'><a href="https://www.instagram.com/brianlpham21/">Instagram</a></h2>
+          <div id='instafeed'></div>
         </section>
       </div>
     );
