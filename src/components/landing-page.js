@@ -9,6 +9,8 @@ import LearnAboutMe from './learn-about-me';
 
 import {fetchPostsData} from '../actions/posts';
 
+import './landing-page.css';
+
 export class LandingPage extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchPostsData());
@@ -33,7 +35,7 @@ export class LandingPage extends React.Component {
         <MainArticleSection2 />
 
         <section id='instagram-feed'>
-          <h2 class='instagram-feed-title'><a href="https://www.instagram.com/brianlpham21/">Instagram</a></h2>
+          <h2 className='instagram-feed-title'><a className='instagram-feed-link' target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/brianlpham21/">Instagram</a></h2>
           <div id='instafeed'></div>
         </section>
       </div>

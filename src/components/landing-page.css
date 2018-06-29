@@ -1,0 +1,9 @@
+.instagram-feed-link {
+  text-decoration: none;
+  color: black;
+  transition: all .3s
+}
+
+.instagram-feed-link:hover {
+  color: dimGrey;
+}
