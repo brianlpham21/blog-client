@@ -8,7 +8,7 @@ export function LearnAboutMe(props) {
       <div className="learn-contents">
         <h2>Learn About Me</h2>
         <p>The experiences that I have had throughout my life have definitely shaped
-        who I am as a person. I am always changing and growing and I hope that
+        who I am as a person. I am always growing and I hope that
         logging my thoughts and experiences can help me map out who I want to be.</p>
         <Link to="/about"><button className="button">Learn More</button></Link>
       </div>
