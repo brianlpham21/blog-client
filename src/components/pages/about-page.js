@@ -35,7 +35,10 @@ export class AboutPage extends React.Component {
                   <Panel.Title className="about-title-icon"><i className="fas fa-code fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Web Developer</Panel.Title>
                 </Panel.Heading>
-                <Panel.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</Panel.Body>
+                <Panel.Body>Having an outlet for my creativity through technology
+                has been one of my great passions and definitely the best discovery
+                I could have made for myself as well as for my career. Web Dev and
+                technology has nearly taken over my life in the greatest way.</Panel.Body>
               </Panel>
             </Col>
             <Col md={3}>
@@ -44,7 +47,10 @@ export class AboutPage extends React.Component {
                   <Panel.Title className="about-title-icon"><i className="fas fa-beer fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Beer Connoisseur</Panel.Title>
                 </Panel.Heading>
-                <Panel.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</Panel.Body>
+                <Panel.Body>From IPAs to Amber Ales, my love for great beer came
+                almost instantly when I was able to enjoy them at the age of 21. Like
+                fitness, beer is probably another thing that brings me great stress
+                relief and joy.</Panel.Body>
               </Panel>
             </Col>
             <Col md={3}>
@@ -53,7 +59,10 @@ export class AboutPage extends React.Component {
                   <Panel.Title className="about-title-icon"><i className="fas fa-football-ball fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Football Diehard</Panel.Title>
                 </Panel.Heading>
-                <Panel.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</Panel.Body>
+                <Panel.Body>Football has always been a sport I enjoyed playing
+                and watching. I played flag football growing up and high school football
+                in Valencia. However, my serious passion for the game only erupted recently
+                in my second year of college.</Panel.Body>
               </Panel>
             </Col>
             <Col md={3}>
@@ -62,7 +71,10 @@ export class AboutPage extends React.Component {
                   <Panel.Title className="about-title-icon"><i className="fas fa-walking fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Fitness Freak</Panel.Title>
                 </Panel.Heading>
-                <Panel.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</Panel.Body>
+                <Panel.Body>One of the pastimes that I will never let go of is
+                physical fitness, whether it be exercising in the gym regularly
+                or playing sports and being out and about. Fitness brings order to
+                my life and definitely keeps me sane.</Panel.Body>
               </Panel>
             </Col>
           </Row>
