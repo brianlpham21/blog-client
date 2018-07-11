@@ -50,7 +50,8 @@ export class AboutPage extends React.Component {
                 <Panel.Body>From IPAs to Amber Ales, my love for great beer came
                 almost instantly when I was able to enjoy them at the age of 21. Like
                 fitness, beer is probably another thing that brings me great stress
-                relief and joy.</Panel.Body>
+                relief and joy. If you need a brewery recommendation, I am happy to
+                give mine.</Panel.Body>
               </Panel>
             </Col>
             <Col md={3}>
@@ -71,9 +72,9 @@ export class AboutPage extends React.Component {
                   <Panel.Title className="about-title-icon"><i className="fas fa-walking fa-2x"></i></Panel.Title>
                   <Panel.Title componentClass="h3">Fitness Freak</Panel.Title>
                 </Panel.Heading>
-                <Panel.Body>One of the pastimes that I will never let go of is
-                physical fitness, whether it be exercising in the gym regularly
-                or playing sports and being out and about. Fitness brings order to
+                <Panel.Body>One of the pastimes that I know I will never let go of is
+                physical fitness, whether it be exercising in the gym, playing sports
+                with some buddies, or taking classes. Fitness brings order and structure to
                 my life and definitely keeps me sane.</Panel.Body>
               </Panel>
             </Col>
