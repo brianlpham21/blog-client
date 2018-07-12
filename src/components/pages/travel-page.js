@@ -64,7 +64,17 @@ export class TravelPage extends React.Component {
             <Col md={4}>
               <h3 className="page-title page-text">Travel</h3>
               <p className="page-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
-              <p className="page-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+              <p className="page-text">My life growing up was always filled with
+              annual trips to Yosemite, Las Vegas and Lake Tahoe. I didnt really
+              know what was out there, for the most part, other than those 3 places.</p>
+              <p className="page-text">As I grew older, I was introduced to so many
+              more destinations, visiting the U.S. East Coast, the Bahamas and Vietnam.
+              It wasnt until recently, probably after college, that my thirst to travel
+              began stronger. I wanted to see so many different places, to explore different
+              cultures, and to try exotic cuisines.</p>
+              <p className="page-text">This category will, hopefully, be jam-packed with my
+              explorations throughout the world, logging my experiences and adventures
+              aroudn the world.</p>
             </Col>
             <Col md={8} className="main-card">
               <Link to={link} className="card-link">
