@@ -63,8 +63,16 @@ export class ExperiencesPage extends React.Component {
           <Row>
             <Col md={4}>
               <h2 className="page-title page-text">Experiences</h2>
-              <p className="page-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
-              <p className="page-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+              <p className="page-text">Our lives are made up of several experiences, whether they be bad
+              or good experiences. I believe that these experiences definitely shape
+              our personalities and determine the values that we have as people.</p>
+              <p className="page-text">This category will definitely be the most broad and general of all the
+              topics that I include on this blog. They could include anything from tech to travel,
+              or family to friends. In this stage of my blog, whichever posts that do not
+              fall clearly in the travel or tech categories will probably go here.</p>
+              <p className="page-text">I am hoping for this category to encompass my thoughts
+              and feelings towards sometimes random aspects of my day-to-day experiences
+              that will build to make sense of my personality.</p>
             </Col>
             <Col md={8} className="main-card">
               <Link to={link} className="card-link">
