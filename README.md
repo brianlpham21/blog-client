@@ -5,6 +5,10 @@ A personal blog application that allows users to post, edit and delete posts on 
 ## Live Site
 You can access the Blog Application at:  https://brians-adventures.netlify.com/
 
+## Screenshots
+
+<img src="/src/images/brians-adventure-blog.png">
+
 ## Technical
 - This application was built using HTML, CSS, JavaScript, NodeJS, Express, Chai & Mocha Testing, MongoDB & Mongoose, React and Redux.
 - GitHub Repo Location for Server Side Code: https://github.com/brianlpham21/blog-server
